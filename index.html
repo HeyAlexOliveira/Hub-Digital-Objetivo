@@ -1,0 +1,5558 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Hub Digital da Construção Civil | Vitória da Conquista - BA</title>
+    <meta
+      name="description"
+      content="Busque, conheça o perfil com portfólio e fale direto com profissionais da construção civil em Vitória da Conquista."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== RESET E BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-blue: #0d47a1;
+        --primary-blue-light: #1976d2;
+        --primary-orange: #f57c00;
+        --primary-orange-light: #ff9800;
+        --primary-orange-dark: #e65100;
+        --white: #ffffff;
+        --gray-100: #f5f7fa;
+        --gray-200: #eceff1;
+        --gray-300: #cfd8dc;
+        --gray-600: #546e7a;
+        --gray-800: #263238;
+        --gray-900: #0f1a1f;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+        --radius: 16px;
+        --radius-sm: 8px;
+        --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        --font: "Poppins", sans-serif;
+        --max-width: 1200px;
+        --header-height: 72px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font);
+        background-color: var(--white);
+        color: var(--gray-800);
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ===== TIPOGRAFIA ===== */
+      .h1 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+      }
+      .h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      .h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .body {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .small {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--gray-600);
+      }
+
+      /* ===== BOTÕES ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-family: var(--font);
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition);
+        text-align: center;
+        min-height: 56px;
+        min-width: 48px;
+        box-shadow: var(--shadow-sm);
+        background-color: var(--gray-200);
+        color: var(--gray-800);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-orange);
+        color: var(--white);
+        box-shadow: 0 4px 14px rgba(245, 124, 0, 0.35);
+      }
+
+      .nav-desktop a.btn-primary {
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-orange-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(245, 124, 0, 0.4);
+      }
+
+      .btn-secondary {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        box-shadow: 0 4px 14px rgba(13, 71, 161, 0.3);
+      }
+
+      .search-form .btn-primary img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-blue-light);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(13, 71, 161, 0.35);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+        box-shadow: none;
+      }
+
+      .btn-outline:hover {
+        background: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .btn-success {
+        background-color: #25d366;
+        color: var(--white);
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      }
+
+      .btn-success:hover {
+        background-color: #1da851;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      }
+
+      .btn-lg {
+        padding: 18px 40px;
+        font-size: 18px;
+        min-height: 64px;
+      }
+
+      .btn-back {
+        background: transparent;
+        border: none;
+        color: var(--gray-600);
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: color var(--transition);
+      }
+
+      .btn-back:hover {
+        color: var(--primary-blue);
+      }
+
+      .btn-white {
+        background: var(--white);
+        color: var(--primary-blue);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-white:hover {
+        background: var(--gray-100);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .btn-external {
+        background: transparent;
+        border: 2px solid var(--primary-orange);
+        color: var(--primary-orange);
+      }
+
+      .btn-external:hover {
+        background: var(--primary-orange);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .btn-external img {
+        filter: invert(58%) sepia(79%) saturate(1232%) hue-rotate(355deg)
+          brightness(98%) contrast(101%);
+      }
+
+      .btn-external:hover img {
+        filter: brightness(0) invert(1);
+      }
+
+      /* ===== HEADER ===== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        height: var(--header-height);
+        transition: all var(--transition);
+      }
+      .header.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.97);
+      }
+      .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--primary-blue);
+      }
+
+      .logo-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+
+      .logo-icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+
+      .logo-text .sub {
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--gray-600);
+        letter-spacing: 0.3px;
+      }
+      .nav-desktop {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .nav-desktop a {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--gray-600);
+        transition: color var(--transition);
+        position: relative;
+      }
+      .nav-desktop a:hover {
+        color: var(--primary-blue);
+      }
+      .nav-desktop a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary-orange);
+        transition: width var(--transition);
+      }
+      .nav-desktop a:hover::after {
+        width: 100%;
+      }
+      .nav-desktop .btn {
+        padding: 10px 24px;
+        font-size: 14px;
+        min-height: 44px;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+      .hamburger span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--gray-800);
+        border-radius: 4px;
+        transition: all var(--transition);
+        transform-origin: center;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+        z-index: 999;
+        padding: 80px 32px 32px;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        overflow-y: auto;
+      }
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+      .mobile-menu a {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--gray-800);
+        padding: 8px 0;
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .mobile-menu .btn {
+        margin-top: 12px;
+        font-size: 18px;
+        min-height: 56px;
+      }
+      .mobile-menu .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+        color: var(--gray-600);
+      }
+
+      .page-section {
+        display: block;
+        transition: opacity 0.3s ease;
+      }
+      .page-section.hidden {
+        display: none;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        padding-top: calc(var(--header-height) + 32px);
+        padding-bottom: 64px;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(180deg, #f8faff 0%, var(--white) 100%);
+      }
+      .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(13, 71, 161, 0.08);
+        color: var(--primary-blue);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        width: fit-content;
+      }
+      .hero-badge img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+      .hero-title {
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .hero-title .highlight {
+        color: var(--primary-orange);
+        position: relative;
+      }
+      .hero-title .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: rgba(245, 124, 0, 0.2);
+        border-radius: 4px;
+        z-index: -1;
+      }
+      .hero-sub {
+        font-size: 18px;
+        color: var(--gray-600);
+        max-width: 520px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 8px;
+      }
+      .hero-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 32px;
+        margin-top: 8px;
+      }
+      .hero-features span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--gray-600);
+      }
+      .hero-features span img {
+        width: 20px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-visual .main-image {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        background: var(--gray-200);
+      }
+      .hero-floating-card {
+        position: absolute;
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        animation: float 4s ease-in-out infinite;
+      }
+      .hero-floating-card:nth-child(2) {
+        top: 12%;
+        right: -8%;
+        animation-delay: 0.5s;
+      }
+      .hero-floating-card:nth-child(3) {
+        bottom: 20%;
+        left: -8%;
+        animation-delay: 1s;
+      }
+      .hero-floating-card:nth-child(4) {
+        bottom: 10%;
+        right: 2%;
+        animation-delay: 1.5s;
+      }
+      .hero-floating-card img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* ===== SEARCH ===== */
+      .search-section {
+        padding: 24px 0 48px;
+        background: var(--white);
+      }
+      .search-section .container {
+        background: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        padding: 32px 40px;
+        margin-top: -40px;
+        position: relative;
+        z-index: 10;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+      }
+      .search-section .h3 {
+        margin-bottom: 16px;
+        font-size: 22px;
+      }
+      .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: flex-end;
+      }
+      .search-form .field {
+        flex: 1 1 180px;
+        min-width: 150px;
+      }
+      .search-form label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--gray-600);
+        margin-bottom: 4px;
+        letter-spacing: 0.3px;
+      }
+      .search-form input,
+      .search-form select {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: var(--radius-sm);
+        border: 2px solid var(--gray-200);
+        font-family: var(--font);
+        font-size: 16px;
+        background: var(--gray-100);
+        transition: border var(--transition);
+      }
+      .search-form input:focus,
+      .search-form select:focus {
+        outline: none;
+        border-color: var(--primary-blue);
+        background: var(--white);
+      }
+      .search-form .btn {
+        flex: 0 0 auto;
+        min-width: 140px;
+      }
+
+      /* ===== CATEGORIAS ===== */
+      .categories {
+        padding: 48px 0 64px;
+        background: var(--white);
+      }
+      .categories .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 20px;
+      }
+      .category-card {
+        background: var(--gray-100);
+        border-radius: var(--radius);
+        padding: 24px 16px;
+        text-align: center;
+        transition: all var(--transition);
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      .category-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-orange);
+        background: var(--white);
+      }
+      .category-card img {
+        width: 78%;
+        height: 78px;
+        object-fit: contain;
+        margin: 0 auto 8px;
+      }
+      .category-card .name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .category-card .desc {
+        font-size: 13px;
+        color: var(--gray-600);
+      }
+
+      /* ===== PROBLEMA ===== */
+      .problem {
+        padding: 64px 0;
+        background: var(--gray-100);
+      }
+      .problem .section-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .problem-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .problem-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 32px 24px;
+        box-shadow: var(--shadow-sm);
+        border-top: 4px solid var(--primary-orange);
+        transition: all var(--transition);
+      }
+      .problem-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .problem-card .number {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--primary-orange);
+        margin-bottom: 8px;
+      }
+      .problem-card .h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      .problem-card p {
+        color: var(--gray-600);
+        font-size: 15px;
+      }
+      .problem-card .icon-problem {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 12px;
+      }
+
+      /* ===== SOLUÇÃO ===== */
+
+      .solution-transition {
+        padding: 64px 0;
+        background: var(--white);
+        text-align: center;
+      }
+
+      .solution-transition .badge {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-blue);
+        background: rgba(13, 71, 161, 0.06);
+        padding: 4px 16px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 12px;
+      }
+
+      .solution-transition .h2 {
+        max-width: 700px;
+        margin: 0 auto 16px;
+      }
+
+      .solution-flow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .solution-flow .step {
+        background: var(--gray-100);
+        padding: 16px 28px;
+        border-radius: var(--radius);
+        font-weight: 600;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .solution-flow .step img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .solution-flow .arrow {
+        font-size: 28px;
+        color: var(--primary-orange);
+      }
+
+      /* ===== COMO FUNCIONA ===== */
+      .how-it-works {
+        padding: 64px 0;
+        background: var(--gray-100);
+      }
+      .how-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .how-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 32px 24px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition);
+        border: 1px solid transparent;
+      }
+      .how-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-orange);
+      }
+      .how-card .step-num {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--primary-orange);
+        opacity: 0.2;
+        margin-bottom: 8px;
+      }
+      .how-card img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        margin: 0 auto 8px;
+      }
+      .how-card .h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+      .how-card p {
+        font-size: 14px;
+        color: var(--gray-600);
+      }
+
+      /* ===== PROFISSIONAIS ===== */
+      .professionals {
+        padding: 64px 0;
+        background: var(--white);
+      }
+      .professionals .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .professionals-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .professional-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-200);
+        transition: all var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+      .professional-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+      }
+      .professional-card .avatar {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background: var(--gray-200);
+      }
+      .professional-card .info {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .professional-card .name {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+      .professional-card .profession {
+        color: var(--gray-600);
+        font-size: 14px;
+      }
+      .professional-card .location {
+        font-size: 13px;
+        color: var(--gray-600);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin: 4px 0;
+      }
+      .professional-card .location img {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+      }
+      .professional-card .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 8px 0 12px;
+      }
+      .professional-card .tags span {
+        background: var(--gray-100);
+        padding: 2px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--gray-600);
+      }
+      .professional-card .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+      }
+      .professional-card .actions .btn {
+        flex: 1;
+        padding: 10px 16px;
+        font-size: 14px;
+        min-height: 44px;
+      }
+
+      /* ===== PORTFOLIO ===== */
+      .portfolio {
+        padding: 64px 0;
+        background: var(--gray-100);
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+      }
+      .portfolio-item {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--gray-300);
+        cursor: pointer;
+        transition: all var(--transition);
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.05);
+      }
+      .portfolio-item .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        opacity: 0;
+        transition: opacity var(--transition);
+        padding: 20px;
+        text-align: center;
+      }
+      .portfolio-item:hover .overlay {
+        opacity: 1;
+      }
+      .portfolio-item .overlay .h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .portfolio-item .overlay .small {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .portfolio-item .overlay .btn {
+        margin-top: 12px;
+        padding: 8px 20px;
+        font-size: 13px;
+        min-height: 40px;
+      }
+
+      /* ===== ANTES E DEPOIS (CARROSSEL DUPLO SINCRONIZADO) ===== */
+      .before-after {
+        padding: 64px 0;
+        background: var(--white);
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .ba-carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+      }
+
+      .ba-track {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        touch-action: pan-y;
+      }
+
+      .ba-slide {
+        flex: 0 0 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 4px;
+      }
+
+      .ba-item {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        position: relative;
+      }
+
+      .ba-item img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .ba-item .label {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--white);
+        padding: 4px 20px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        backdrop-filter: blur(4px);
+        letter-spacing: 0.5px;
+      }
+
+      .ba-item .label.depois {
+        background: var(--primary-orange);
+      }
+
+      .ba-carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--white);
+        border: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all var(--transition);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px);
+      }
+
+      .ba-carousel-btn:hover {
+        background: var(--primary-orange);
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .ba-carousel-btn.prev {
+        left: 16px;
+      }
+
+      .ba-carousel-btn.next {
+        right: 16px;
+      }
+
+      .ba-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .ba-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--gray-300);
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition);
+        padding: 0;
+      }
+
+      .ba-dots .dot.active {
+        background: var(--primary-orange);
+        transform: scale(1.2);
+      }
+
+      .ba-dots .dot:hover {
+        background: var(--primary-orange-light);
+      }
+
+      @media (max-width: 768px) {
+        .ba-slide {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .ba-item img {
+          height: 200px;
+        }
+        .ba-carousel-btn {
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
+        }
+        .ba-carousel-btn.prev {
+          left: 8px;
+        }
+        .ba-carousel-btn.next {
+          right: 8px;
+        }
+        .ba-item .label {
+          font-size: 11px;
+          padding: 2px 12px;
+          top: 10px;
+          left: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ba-slide {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .ba-item img {
+          height: 140px;
+        }
+        .ba-carousel-btn {
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+        }
+        .ba-item .label {
+          font-size: 9px;
+          padding: 2px 8px;
+          top: 6px;
+          left: 6px;
+        }
+      }
+
+      /* ===== SEGURANÇA ===== */
+
+      .security {
+        padding: 64px 0;
+        background: var(--gray-100);
+      }
+
+      .security-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .security-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow-sm);
+        border-left: 4px solid var(--primary-blue);
+        transition: all var(--transition);
+      }
+
+      .security-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .security-card .icon-security {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        margin-bottom: 8px;
+      }
+
+      .security-card .h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .security-card .h3 img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
+
+      .security-card p {
+        font-size: 14px;
+        color: var(--gray-600);
+        margin-bottom: 8px;
+      }
+
+      .security-card .btn-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--primary-blue);
+        transition: color var(--transition);
+      }
+
+      .security-card .btn-link:hover {
+        color: var(--primary-orange);
+      }
+
+      .security-card .btn-link img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+
+      .security .cta-center {
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      .security .cta-center .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .security .cta-center .btn img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .security .disclaimer {
+        text-align: center;
+        font-size: 13px;
+        color: var(--gray-600);
+        margin-top: 16px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ===== ESTATÍSTICAS ===== */
+      .stats {
+        padding: 48px 0;
+        background: var(--white);
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        text-align: center;
+      }
+      .stats-grid .number {
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--primary-blue);
+        line-height: 1.1;
+      }
+      .stats-grid .label {
+        font-size: 14px;
+        color: var(--gray-600);
+      }
+
+      /* ===== ODS ===== */
+      .ods {
+        padding: 64px 0;
+        background: var(--white);
+      }
+      .ods-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .ods-card {
+        background: var(--gray-100);
+        border-radius: var(--radius);
+        padding: 24px 16px;
+        text-align: center;
+        transition: all var(--transition);
+      }
+      .ods-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-sm);
+      }
+      .ods-card .number {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary-orange);
+      }
+      .ods-card .h3 {
+        font-size: 16px;
+        margin: 4px 0;
+      }
+      .ods-card p {
+        font-size: 13px;
+        color: var(--gray-600);
+      }
+      .ods-card img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        margin: 0 auto 8px;
+      }
+
+      /* ===== DEPOIMENTOS ===== */
+      .testimonials {
+        padding: 64px 0;
+        background: var(--gray-100);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .testimonial-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition);
+      }
+      .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .testimonial-card .stars {
+        color: #f5b342;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      .testimonial-card blockquote {
+        font-style: italic;
+        font-size: 15px;
+        color: var(--gray-600);
+        margin-bottom: 12px;
+      }
+      .testimonial-card .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testimonial-card .author img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: var(--gray-200);
+      }
+      .testimonial-card .author .name {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .testimonial-card .author .role {
+        font-size: 13px;
+        color: var(--gray-600);
+      }
+
+      /* ===== FAQ ===== */
+      .faq {
+        padding: 64px 0;
+        background: var(--white);
+      }
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 20px 0;
+        font-family: var(--font);
+        font-size: 17px;
+        font-weight: 600;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: var(--gray-800);
+        transition: color var(--transition);
+      }
+      .faq-question:hover {
+        color: var(--primary-blue);
+      }
+      .faq-question .icon {
+        font-size: 24px;
+        transition: transform var(--transition);
+        color: var(--primary-orange);
+      }
+      .faq-item.open .faq-question .icon {
+        transform: rotate(180deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.35s ease;
+        padding: 0 0 0 0;
+        color: var(--gray-600);
+        font-size: 15px;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 200px;
+        padding: 0 0 20px 0;
+      }
+
+      /* ===== CTA FINAL ===== */
+
+      .cta-final {
+        padding: 80px 0;
+        background: linear-gradient(135deg, var(--gray-900), #1a2a3a);
+        color: var(--white);
+        text-align: center;
+      }
+
+      .cta-final .h2 {
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        max-width: 500px;
+        margin: 0 auto 32px;
+        opacity: 0.8;
+      }
+
+      .cta-final .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .cta-final .option {
+        flex: 1 1 280px;
+        max-width: 360px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius);
+        padding: 32px 24px;
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all var(--transition);
+        text-align: center;
+      }
+
+      .cta-final .option:hover {
+        transform: translateY(-6px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .cta-final .option .h3 {
+        margin-bottom: 8px;
+      }
+
+      .cta-final .option img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 8px;
+      }
+
+      .cta-final .option .btn {
+        margin-top: 12px;
+        width: 100%;
+      }
+     /* ===== FOOTER ===== */
+
+.footer {
+  background: var(--gray-900);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 48px 0 24px;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand .logo {
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.footer-brand .logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+.footer-brand .logo-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  filter: none !important;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.footer h4 {
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color var(--transition);
+}
+
+.footer a:hover {
+  color: var(--white);
+}
+
+.footer .social {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.footer .social a {
+  background: rgba(255, 255, 255, 0.08);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.footer .social a:hover {
+  background: var(--primary-orange);
+}
+
+.footer .social a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+
+.footer .social a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 13px;
+}
+/* ==/* ===== PERFIL ===== */
+
+.profile-section {
+  display: none !important;
+  padding-top: calc(var(--header-height) + 16px);
+  padding-bottom: 32px;
+  background: var(--gray-100);
+  animation: fadeIn 0.4s ease;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-section.active {
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== CABEÇALHO ===== */
+
+.profile-header {
+  background-image: linear-gradient(
+      135deg,
+      rgba(13, 71, 161, 0.82),
+      rgba(10, 42, 94, 0.88)
+    ),
+    url("https://i.ibb.co/pvjF1M60/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 32px 40px;
+
+  color: var(--white);
+
+  display: flex;
+
+  gap: 32px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.profile-header .avatar {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255, 255, 255, 0.3);
+
+  object-fit: cover;
+
+  background: var(--gray-300);
+
+  flex-shrink: 0;
+}
+
+/* ===== NOME ===== */
+
+.profile-header .info h1 {
+  font-size: 28px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+/* ===== VERIFICADO ===== */
+
+.profile-header .info .badge {
+  background: rgba(255, 255, 255, 0.2);
+
+  padding: 4px 12px;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+.profile-header .info .badge img {
+  width: 14px;
+
+  height: 14px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+/* ===== PROFISSÃO ===== */
+
+.profile-header .info .profession {
+  font-size: 18px;
+
+  opacity: 0.9;
+
+  margin-top: 4px;
+}
+
+/* ===== LOCALIZAÇÃO ===== */
+
+.profile-header .info .location {
+  font-size: 14px;
+
+  opacity: 0.8;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 2px;
+}
+
+.profile-header .info .location img {
+  width: 16px;
+
+  height: 16px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.profile-header .info .location span {
+  display: inline-block;
+}
+
+/* ===== BOTÕES ===== */
+
+.profile-header .actions {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 12px;
+}
+
+.profile-header .actions .btn {
+  padding: 10px 24px;
+
+  font-size: 14px;
+
+  min-height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.profile-header .actions .btn img {
+  width: 18px;
+
+  height: 18px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+/* ===== ABAS ===== */
+
+.profile-tabs {
+  display: flex;
+
+  gap: 4px;
+
+  padding: 0 40px;
+
+  background: var(--gray-100);
+
+  border-bottom: 1px solid var(--gray-200);
+
+  overflow-x: auto;
+}
+
+.profile-tabs .tab-btn {
+  padding: 14px 24px;
+
+  border: none;
+
+  background: transparent;
+
+  font-family: var(--font);
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  color: var(--gray-600);
+
+  cursor: pointer;
+
+  border-bottom: 3px solid transparent;
+
+  transition: all var(--transition);
+
+  white-space: nowrap;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.profile-tabs .tab-btn:hover {
+  color: var(--primary-blue);
+}
+
+.profile-tabs .tab-btn.active {
+  color: var(--primary-blue);
+
+  border-bottom-color: var(--primary-orange);
+}
+
+.profile-tabs .tab-btn .badge {
+  background: var(--gray-200);
+
+  color: var(--gray-600);
+
+  padding: 1px 10px;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  margin-left: 6px;
+}
+
+.profile-tabs .tab-btn.active .badge {
+  background: var(--primary-orange);
+
+  color: var(--white);
+}
+
+.profile-tabs .tab-btn img {
+  width: 18px;
+
+  height: 18px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+/* ===== CORPO ===== */
+
+.profile-body {
+  padding: 32px 40px;
+}
+
+.profile-body .tab-content {
+  display: none;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-body .tab-content.active {
+  display: block;
+}
+
+/* ===== SOBRE ===== */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 32px;
+}
+
+.about-bio h3 {
+  margin-bottom: 12px;
+}
+
+.about-bio p {
+  color: var(--gray-600);
+
+  margin-bottom: 16px;
+
+  line-height: 1.8;
+}
+
+/* ===== INFORMAÇÕES GERAIS ===== */
+
+.about-details {
+  background: var(--gray-100);
+
+  border-radius: var(--radius);
+
+  padding: 24px;
+}
+
+.about-details h3 {
+  margin-bottom: 16px;
+
+  font-size: 18px;
+}
+
+.about-details .detail-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid var(--gray-200);
+
+  font-size: 14px;
+}
+
+.about-details .detail-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== ÍCONES DOS DETALHES ===== */
+
+.about-details .detail-item .label {
+  color: var(--gray-600);
+
+  font-weight: 500;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  white-space: nowrap;
+}
+
+.about-details .detail-item .label img {
+  width: 17px;
+
+  height: 17px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.about-details .detail-item .value {
+  font-weight: 500;
+
+  text-align: right;
+}
+
+.about-details .detail-item .verified-value {
+  color: var(--primary-blue);
+}
+
+.about-details .detail-item .available-value {
+  color: #4caf50;
+}
+
+/* ===== TAGS ===== */
+
+.about-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.about-tags span {
+  background: var(--gray-100);
+
+  padding: 6px 16px;
+
+  border-radius: 50px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: var(--gray-600);
+
+  border: 1px solid var(--gray-200);
+}
+
+/* ===== PORTFÓLIO ===== */
+
+.profile-portfolio-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 16px;
+}
+
+.profile-portfolio-item {
+  position: relative;
+
+  border-radius: var(--radius-sm);
+
+  overflow: hidden;
+
+  aspect-ratio: 4/3;
+
+  background: var(--gray-300);
+
+  cursor: pointer;
+
+  transition: all var(--transition);
+}
+
+.profile-portfolio-item:hover {
+  transform: scale(1.02);
+
+  box-shadow: var(--shadow-md);
+}
+
+.profile-portfolio-item img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.profile-portfolio-item .overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    transparent 60%
+  );
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 16px;
+
+  color: var(--white);
+}
+
+.profile-portfolio-item .overlay .title {
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+.profile-portfolio-item .overlay .category {
+  font-size: 12px;
+
+  opacity: 0.8;
+}
+
+/* ===== SERVIÇOS ===== */
+
+.profile-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(260px, 1fr));
+
+  gap: 16px;
+}
+
+.profile-service-card {
+  background: var(--gray-100);
+
+  border-radius: var(--radius-sm);
+
+  padding: 20px;
+
+  border-left: 4px solid var(--primary-orange);
+
+  transition: all var(--transition);
+}
+
+.profile-service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-service-card .icon-service {
+  width: 32px;
+
+  height: 32px;
+
+  object-fit: contain;
+
+  margin-bottom: 4px;
+}
+
+.profile-service-card .name {
+  font-weight: 600;
+
+  font-size: 17px;
+}
+
+.profile-service-card .description {
+  font-size: 14px;
+
+  color: var(--gray-600);
+
+  margin: 4px 0 8px;
+}
+
+.profile-service-card .price {
+  font-weight: 600;
+
+  color: var(--primary-blue);
+
+  font-size: 15px;
+}
+
+.profile-service-card .btn {
+  margin-top: 12px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  font-size: 14px;
+
+  min-height: 40px;
+}
+      /* ===== MODAL DE PROJETO COM CARROSSEL ===== */
+      .project-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .project-modal.active {
+        display: flex;
+      }
+      .project-modal-content {
+        background: var(--white);
+        border-radius: var(--radius);
+        max-width: 800px;
+        width: 100%;
+        max-height: 95vh;
+        overflow-y: auto;
+        box-shadow: var(--shadow-lg);
+        animation: modalIn 0.4s ease;
+        position: relative;
+      }
+      @keyframes modalIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9) translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+      .project-modal-content .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--white);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all var(--transition);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .project-modal-content .modal-close:hover {
+        background: var(--primary-orange);
+        transform: rotate(90deg);
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        background: #000;
+        border-radius: var(--radius) var(--radius) 0 0;
+        overflow: hidden;
+      }
+      .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        touch-action: pan-y;
+      }
+      .carousel-slide {
+        min-width: 100%;
+        aspect-ratio: 16/10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1a1a1a;
+      }
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--white);
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all var(--transition);
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .carousel-btn:hover {
+        background: var(--primary-orange);
+      }
+      .carousel-btn.prev {
+        left: 12px;
+      }
+      .carousel-btn.next {
+        right: 12px;
+      }
+
+      .carousel-indicators {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 5;
+      }
+      .carousel-indicators .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: all var(--transition);
+        border: none;
+      }
+      .carousel-indicators .dot.active {
+        background: var(--white);
+        transform: scale(1.2);
+      }
+
+      .carousel-counter {
+        position: absolute;
+        top: 16px;
+        right: 70px;
+        color: var(--white);
+        background: rgba(0, 0, 0, 0.6);
+        padding: 4px 14px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        z-index: 5;
+      }
+
+      .project-modal-content .modal-body {
+        padding: 32px;
+      }
+      .project-modal-content .modal-body .badge {
+        display: inline-block;
+        background: var(--gray-100);
+        color: var(--gray-600);
+        padding: 4px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .project-modal-content .modal-body .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .project-modal-content .modal-body .category {
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      .project-modal-content .modal-body .description {
+        color: var(--gray-600);
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+      .project-modal-content .modal-body .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 16px 0;
+      }
+      .project-modal-content .modal-body .details .detail {
+        background: var(--gray-100);
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+      }
+      .project-modal-content .modal-body .details .detail .label {
+        font-size: 11px;
+        color: var(--gray-600);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .project-modal-content .modal-body .details .detail .value {
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 2px;
+      }
+      .project-modal-content .modal-body .btn {
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      /* ===== RESPONSIVIDADE ===== */
+      @media (max-width: 1024px) {
+        .hero .container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-content {
+          align-items: center;
+        }
+        .hero-sub {
+          max-width: 100%;
+        }
+        .hero-features {
+          justify-content: center;
+        }
+        .hero-title {
+          font-size: 42px;
+        }
+        .hero-visual .main-image {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+        .hero-floating-card:nth-child(2) {
+          right: 0;
+        }
+        .hero-floating-card:nth-child(3) {
+          left: 0;
+        }
+        .how-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .problem-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer .container {
+          grid-template-columns: 1fr 1fr;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .profile-header {
+          flex-direction: column;
+          text-align: center;
+        }
+        .profile-header .info h1 {
+          justify-content: center;
+        }
+        .profile-header .actions {
+          justify-content: center;
+        }
+        .profile-tabs {
+          padding: 0 16px;
+        }
+        .profile-body {
+          padding: 20px 16px;
+        }
+        .carousel-slide {
+          aspect-ratio: 16/9;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-desktop {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .hero-title {
+          font-size: 34px;
+        }
+        .hero-actions {
+          flex-direction: column;
+          width: 100%;
+        }
+        .hero-actions .btn {
+          width: 100%;
+        }
+        .hero-features {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .search-section .container {
+          padding: 24px 20px;
+          margin-top: -20px;
+        }
+        .search-form {
+          flex-direction: column;
+        }
+        .search-form .field {
+          flex: 1 1 auto;
+          width: 100%;
+        }
+        .search-form .btn {
+          width: 100%;
+        }
+        .categories-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .problem-grid {
+          grid-template-columns: 1fr;
+        }
+        .how-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .professionals-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ba-slide {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .ba-item img {
+          height: 200px;
+        }
+        .ba-carousel-btn {
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
+        }
+        .ba-carousel-btn.prev {
+          left: 8px;
+        }
+        .ba-carousel-btn.next {
+          right: 8px;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .stats-grid .number {
+          font-size: 32px;
+        }
+        .ods-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-final .options {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cta-final .option {
+          max-width: 100%;
+          width: 100%;
+        }
+        .footer .container {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          text-align: center;
+        }
+        .hero-floating-card {
+          display: none;
+        }
+        .hero-visual .main-image {
+          max-width: 100%;
+        }
+        .profile-header .avatar {
+          width: 100px;
+          height: 100px;
+        }
+        .profile-header .info h1 {
+          font-size: 24px;
+        }
+        .profile-tabs .tab-btn {
+          padding: 10px 16px;
+          font-size: 14px;
+        }
+        .profile-portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .profile-services-grid {
+          grid-template-columns: 1fr;
+        }
+        .carousel-slide {
+          aspect-ratio: 4/3;
+        }
+        .carousel-btn {
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+        }
+        .carousel-btn.prev {
+          left: 6px;
+        }
+        .carousel-btn.next {
+          right: 6px;
+        }
+        .project-modal-content .modal-body {
+          padding: 20px;
+        }
+        .project-modal-content .modal-body .details {
+          grid-template-columns: 1fr;
+        }
+        .carousel-counter {
+          right: 60px;
+          font-size: 11px;
+          padding: 2px 10px;
+        }
+        .ba-item .label {
+          font-size: 11px;
+          padding: 2px 12px;
+          top: 10px;
+          left: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: 28px;
+        }
+        .hero-sub {
+          font-size: 16px;
+        }
+        .categories-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .professionals-grid {
+          grid-template-columns: 1fr;
+        }
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+        .ods-grid {
+          grid-template-columns: 1fr;
+        }
+        .container {
+          padding: 0 16px;
+        }
+        .search-section .container {
+          padding: 16px;
+        }
+        .btn-lg {
+          padding: 14px 24px;
+          font-size: 16px;
+          min-height: 56px;
+        }
+        .profile-header {
+          padding: 20px;
+        }
+        .profile-body {
+          padding: 16px;
+        }
+        .profile-portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .profile-tabs .tab-btn {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+        .carousel-slide {
+          aspect-ratio: 1/1;
+        }
+        .carousel-btn {
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+        }
+        .project-modal-content .modal-body {
+          padding: 16px;
+        }
+        .ba-slide {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .ba-item img {
+          height: 140px;
+        }
+        .ba-carousel-btn {
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+        }
+        .ba-item .label {
+          font-size: 9px;
+          padding: 2px 8px;
+          top: 6px;
+          left: 6px;
+        }
+        .ba-dots .dot {
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .btn-external-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--primary-blue);
+        transition: color var(--transition);
+        padding: 4px 0;
+        border-bottom: 1px dashed var(--primary-blue);
+      }
+      .btn-external-link:hover {
+        color: var(--primary-orange);
+        border-bottom-color: var(--primary-orange);
+      }
+      .btn-external-link img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== MODAL DE PROJETO COM CARROSSEL ===== -->
+    <div class="project-modal" id="projectModal" onclick="closeProjectModal()">
+      <div class="project-modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeProjectModal()">✕</button>
+        <div class="carousel-container">
+          <div class="carousel-slides" id="carouselSlides"></div>
+          <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+          <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+          <div class="carousel-counter" id="carouselCounter">1 / 1</div>
+          <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+        <div class="modal-body">
+          <span class="badge" id="modalProjectBadge">Projeto</span>
+          <h2 class="title" id="modalProjectTitle">Título do Projeto</h2>
+          <div class="category" id="modalProjectCategory">Categoria</div>
+          <p class="description" id="modalProjectDescription">
+            Descrição detalhada do projeto...
+          </p>
+          <div class="details" id="modalProjectDetails">
+            <div class="detail">
+              <div class="label">Profissional</div>
+              <div class="value" id="modalProjectProfessional">-</div>
+            </div>
+            <div class="detail">
+              <div class="label">Data</div>
+              <div class="value" id="modalProjectDate">-</div>
+            </div>
+            <div class="detail">
+              <div class="label">Localização</div>
+              <div class="value" id="modalProjectLocation">-</div>
+            </div>
+            <div class="detail">
+              <div class="label">Duração</div>
+              <div class="value" id="modalProjectDuration">-</div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="btn btn-primary"
+            id="modalProjectWhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+              alt="WhatsApp"
+              style="width: 20px; height: 20px; filter: brightness(0) invert(1)"
+            />
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header" role="banner">
+      <div class="container">
+        <a
+          href="#"
+          class="logo"
+          id="logoLink"
+          aria-label="Hub Digital da Construção Civil"
+        >
+          <span class="logo-icon">
+            <img src="https://i.ibb.co/fGpKdPQB/logo.png" alt="Logo" />
+          </span>
+          <span class="logo-text">
+            HUB DIGITAL
+            <span class="sub">CONSTRUÇÃO CIVIL</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a href="#buscar">Buscar</a>
+          <a href="#profissionais">Profissionais</a>
+          <div class="nav-actions">
+            <a href="#buscar" class="btn btn-primary"
+              >Encontrar profissional</a
+            >
+          </div>
+        </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      role="navigation"
+      aria-label="Menu mobile"
+    >
+      <button class="close-btn" id="closeMenu" aria-label="Fechar menu">
+        ✕
+      </button>
+      <a href="#buscar">Buscar</a>
+      <a href="#profissionais">Profissionais</a>
+      <a href="#buscar" class="btn btn-primary btn-block"
+        >Encontrar profissional</a
+      >
+    </div>
+
+    <!-- ===== LANDING PAGE ===== -->
+    <div id="landingPage" class="page-section">
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="inicio">
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-badge">
+              <img src="https://i.ibb.co/fGpKdPQB/logo.png" alt="Inovação" />
+              INOVAÇÃO PARA A CONSTRUÇÃO CIVIL
+            </span>
+            <h1 class="hero-title">
+              Sua obra começa com o
+              <span class="highlight">profissional certo.</span>
+            </h1>
+            <p class="hero-sub">
+              Encontre profissionais da construção civil, conheça seus trabalhos
+              e entre em contato diretamente para solicitar um orçamento.
+            </p>
+            <div class="hero-actions">
+              <a href="#profissionais" class="btn btn-primary btn-lg"
+                >Ver profissionais</a
+              >
+            </div>
+            <div class="hero-features">
+              <span
+                ><img src="https://i.ibb.co/W4v7sT2K/icons-1.png" alt="Local" />
+                Profissionais locais</span
+              >
+              <span
+                ><img
+                  src="https://i.ibb.co/mFYcRWpq/icons-2.png"
+                  alt="Portfólio"
+                />
+                Portfólios de trabalhos</span
+              >
+              <span
+                ><img
+                  src="https://i.ibb.co/gZ5ndqL1/icons-3.png"
+                  alt="Contato"
+                />
+                Contato direto</span
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              src="https://i.ibb.co/x8FGkvZx/capa.png"
+              alt="Profissional da construção civil em uma obra"
+              class="main-image"
+              loading="lazy"
+            />
+            <div class="hero-floating-card" style="top: 12%; right: -8%">
+              <img
+                src="https://i.ibb.co/1GhBJfx7/icons-4.png"
+                alt="Verificado"
+              />
+              <span>Perfil verificado</span>
+            </div>
+            <div class="hero-floating-card" style="bottom: 20%; left: -8%">
+              <img
+                src="https://i.ibb.co/LWxyZK0/icon-4.png"
+                alt="Localização"
+              />
+              <span>Vitória da Conquista</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SEARCH ===== -->
+      <section class="search-section" id="buscar">
+        <div class="container">
+          <h3 class="h3">O que você precisa para sua obra?</h3>
+          <form class="search-form" role="search" id="searchForm">
+            <div class="field">
+              <label for="search-service">Serviço</label>
+              <input
+                type="text"
+                id="search-service"
+                placeholder="Digite o serviço..."
+                aria-label="Digite o serviço desejado"
+              />
+            </div>
+            <div class="field">
+              <label for="search-category">Categoria</label>
+              <select id="search-category" aria-label="Selecione uma categoria">
+                <option value="">Todas</option>
+                <option value="pedreiro">Pedreiro</option>
+                <option value="pintor">Pintor</option>
+                <option value="eletricista">Eletricista</option>
+                <option value="encanador">Encanador</option>
+                <option value="gesseiro">Gesseiro</option>
+                <option value="serralheiro">Serralheiro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="search-location">Localização</label>
+              <input
+                type="text"
+                id="search-location"
+                placeholder="Vitória da Conquista"
+                aria-label="Digite sua localização"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <img
+                src="https://i.ibb.co/rGpzqHVt/icons-6.png"
+                alt=""
+                width="20"
+                height="20"
+              />
+              Buscar
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== CATEGORIAS ===== -->
+
+      <!-- ===== PROBLEMA ===== -->
+
+      <!-- ===== PROFISSIONAIS ===== -->
+      <section class="professionals" id="profissionais">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Conheça alguns profissionais</h2>
+            <p class="body" style="color: var(--gray-600)">
+              Veja quem já está preparado para apresentar seu trabalho.
+            </p>
+          </div>
+          <div class="professionals-grid" id="professionalsGrid">
+            <!-- CARD 1 - Carlos Souza - Pedreiro -->
+            <div class="professional-card reveal" data-category="pedreiro">
+              <img
+                src="https://i.ibb.co/G4qKJ66q/Profissional-2.png"
+                alt="Foto de Carlos Souza"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Carlos Souza</div>
+                <div class="profession">Pedreiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Alvenaria</span>
+                  <span>Reformas</span>
+                  <span>Acabamentos</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('1')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Carlos!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 - Mariano Alves - Pintor -->
+            <div class="professional-card reveal" data-category="pintor">
+              <img
+                src="https://i.ibb.co/fdswpV66/Profissional-3.png"
+                alt="Foto de Mariano Alves"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Mariano Alves</div>
+                <div class="profession">Pintor</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Pintura Residencial</span>
+                  <span>Texturização</span>
+                  <span>Acabamento</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('2')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Mariano!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 - Roberto Silva - Eletricista -->
+            <div class="professional-card reveal" data-category="eletricista">
+              <img
+                src="https://i.ibb.co/21TGSxML/Profissional-1.png"
+                alt="Foto de Roberto Silva"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Roberto Silva</div>
+                <div class="profession">Eletricista</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Instalações Elétricas</span>
+                  <span>Automação</span>
+                  <span>Manutenção</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('3')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Roberto!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 - Fernando Lima - Encanador -->
+            <div class="professional-card reveal" data-category="encanador">
+              <img
+                src="https://i.ibb.co/7tsWW8Qh/Profissional-5.png"
+                alt="Foto de Fernando Lima"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Fernando Lima</div>
+                <div class="profession">Encanador</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Hidráulica</span>
+                  <span>Reformas</span>
+                  <span>Manutenção</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('4')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Fernando!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 - André Santos - Gesseiro -->
+            <div class="professional-card reveal" data-category="gesseiro">
+              <img
+                src="https://i.ibb.co/zh8CTHqy/Profissional-6.png"
+                alt="Foto de André Santos"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">André Santos</div>
+                <div class="profession">Gesseiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Drywall</span>
+                  <span>Forros de Gesso</span>
+                  <span>Acabamentos</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('5')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20André!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 - Paulo Mendes - Serralheiro -->
+            <div class="professional-card reveal" data-category="serralheiro">
+              <img
+                src="https://i.ibb.co/5x933kfF/Profissional-9.png"
+                alt="Foto de Paulo Mendes"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Paulo Mendes</div>
+                <div class="profession">Serralheiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Estruturas Metálicas</span>
+                  <span>Portões</span>
+                  <span>Grades</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('6')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Paulo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 7 - João Oliveira - Serralheiro (segundo serralheiro) -->
+            <div class="professional-card reveal" data-category="serralheiro">
+              <img
+                src="https://i.ibb.co/jvMmJZvk/Profissional-8.png"
+                alt="Foto de João Oliveira"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">João Oliveira</div>
+                <div class="profession">Serralheiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Esquadrias</span>
+                  <span>Estruturas</span>
+                  <span>Projetos Personalizados</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('7')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20João!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 8 - Antônio Rocha - Pedreiro (segundo pedreiro) -->
+            <div class="professional-card reveal" data-category="pedreiro">
+              <img
+                src="https://i.ibb.co/4nZxBhp6/Profissional-10.png"
+                alt="Foto de Antônio Rocha"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Antônio Rocha</div>
+                <div class="profession">Pedreiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Construção</span>
+                  <span>Reforma</span>
+                  <span>Alvenaria</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('8')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Antônio!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 9 - Ricardo Mota - Eletricista (segundo eletricista) -->
+            <div class="professional-card reveal" data-category="eletricista">
+              <img
+                src="https://i.ibb.co/hx9Qn0tC/Profissional-4.png"
+                alt="Foto de Ricardo Mota"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Ricardo Mota</div>
+                <div class="profession">Eletricista</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Instalações</span>
+                  <span>Manutenção</span>
+                  <span>Projetos Elétricos</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('9')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Ricardo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 10 - Gabriel Freitas - Gesseiro (segundo gesseiro) -->
+            <div class="professional-card reveal" data-category="gesseiro">
+              <img
+                src="https://i.ibb.co/0V6hwQQD/Profissional-7.png"
+                alt="Foto de Gabriel Freitas"
+                class="avatar"
+                loading="lazy"
+              />
+              <div class="info">
+                <div class="name">Gabriel Freitas</div>
+                <div class="profession">Gesseiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Vitória da Conquista - BA
+                </div>
+                <div class="tags">
+                  <span>Drywall</span>
+                  <span>Sancas</span>
+                  <span>Revestimentos</span>
+                </div>
+                <div class="actions">
+                  <button
+                    class="btn btn-outline ver-perfil"
+                    onclick="openProfile('10')"
+                    style="flex: 1"
+                  >
+                    Ver perfil
+                  </button>
+                  <a
+                    href="https://wa.me/5577999999999?text=Olá%20Gabriel!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+                    class="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                      "
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            style="
+              text-align: center;
+              margin-top: 24px;
+              font-size: 14px;
+              color: var(--gray-600);
+            "
+          >
+            * Dados demonstrativos. Profissionais selecionados pela equipe Hub
+            Digital.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PORTFOLIO ===== -->
+    </div>
+    <!-- ===== FIM LANDING PAGE ===== -->
+
+<!-- ===== PERFIL PROFISSIONAL ===== -->
+
+<section class="profile-section" id="profileSection">
+  <div class="container">
+
+    <div style="margin-bottom: 16px">
+      <button class="btn-back" onclick="closeProfile()">
+        ← Voltar para profissionais
+      </button>
+    </div>
+
+    <div class="profile-card">
+
+      <div class="profile-header">
+
+        <img
+          src=""
+          alt="Foto do profissional"
+          class="avatar"
+          id="profileAvatar"
+        />
+
+        <div class="info">
+
+          <h1 id="profileName">
+            Nome
+
+            <span class="badge">
+              <img
+                src="https://i.ibb.co/zpmFvpp/icons-4.png"
+                alt=""
+                aria-hidden="true"
+              />
+              Verificado
+            </span>
+          </h1>
+
+          <div class="profession" id="profileProfession">
+            Profissão
+          </div>
+
+          <div class="location" id="profileLocation">
+            <img
+              src="https://i.ibb.co/8LrxMqTs/icon-4.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Localização</span>
+          </div>
+
+          <div class="actions">
+
+            <a
+              href="#"
+              class="btn btn-success"
+              id="profileWhatsApp"
+            >
+              <img
+                src="https://www.vozdobico.com.br/wp-content/uploads/2017/04/whatsapp-logo-icone.png"
+                alt=""
+                aria-hidden="true"
+              />
+              WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="profile-tabs" id="profileTabs">
+
+        <button class="tab-btn active" data-tab="portfolio">
+
+          <img
+            src="https://i.ibb.co/4gYCHbtP/icons-20.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          Portfólio
+
+          <span class="badge" id="portfolioBadge">
+            4
+          </span>
+
+        </button>
+
+        <button class="tab-btn" data-tab="sobre">
+
+          <img
+            src="https://i.ibb.co/Cp4KmzVv/icons-18.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          Sobre
+
+        </button>
+
+        <button class="tab-btn" data-tab="servicos">
+
+          <img
+            src="https://i.ibb.co/pBQQRwws/icons-19.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          Serviços
+
+          <span class="badge">
+            4
+          </span>
+
+        </button>
+
+      </div>
+
+      <div class="profile-body">
+
+        <div class="tab-content active" id="tab-portfolio">
+
+          <div
+            style="
+              margin-bottom: 16px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 8px;
+            "
+          >
+
+            <h3>Portfólio de Trabalhos</h3>
+
+            <span
+              style="
+                color: var(--gray-600);
+                font-size: 14px;
+              "
+              id="portfolioCount"
+            >
+              4 projetos
+            </span>
+
+          </div>
+
+          <div
+            class="profile-portfolio-grid"
+            id="profilePortfolioGrid"
+          ></div>
+
+        </div>
+
+        <div class="tab-content" id="tab-sobre">
+
+          <div class="about-grid">
+
+            <div class="about-bio">
+
+              <h3>Sobre mim</h3>
+
+              <p id="profileBio">
+                Carregando informações...
+              </p>
+
+              <h3 style="margin-top: 24px">
+                Experiência e Formação
+              </h3>
+
+              <p id="profileFormacao">
+                Carregando...
+              </p>
+
+              <p
+                id="profileExperiencia"
+                style="margin-top: 8px"
+              ></p>
+
+              <h3 style="margin-top: 24px">
+                Especialidades
+              </h3>
+
+              <div
+                class="about-tags"
+                id="profileTags"
+              ></div>
+
+            </div>
+
+            <div class="about-details">
+
+              <h3>Informações Gerais</h3>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/8LrxMqTs/icon-4.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Localização
+
+                </span>
+
+                <span
+                  class="value"
+                  id="detailLocation"
+                >
+                  -
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/x8D8s82J/Experi-ncia.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Experiência
+
+                </span>
+
+                <span
+                  class="value"
+                  id="detailExperiencia"
+                >
+                  -
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/mFCFHbwL/Contato.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Contato
+
+                </span>
+
+                <span
+                  class="value"
+                  id="detailContato"
+                >
+                  -
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/vCpNbjYd/Email.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Email
+
+                </span>
+
+                <span
+                  class="value"
+                  id="detailEmail"
+                >
+                  -
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/zpmFvpp/icons-4.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Verificado
+
+                </span>
+
+                <span
+                  class="value verified-value"
+                >
+                  ✓ Sim
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/gMTVGTkq/Categoria.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Categoria
+
+                </span>
+
+                <span
+                  class="value"
+                  id="detailCategoria"
+                >
+                  -
+                </span>
+
+              </div>
+
+              <div class="detail-item">
+
+                <span class="label">
+
+                  <img
+                    src="https://i.ibb.co/0jV042m6/Disponivel.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+
+                  Disponível
+
+                </span>
+
+                <span
+                  class="value available-value"
+                >
+                  Sim
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tab-content" id="tab-servicos">
+
+          <div style="margin-bottom: 16px">
+
+            <h3>Serviços Oferecidos</h3>
+
+            <p
+              style="
+                color: var(--gray-600);
+                font-size: 14px;
+              "
+            >
+              Conheça os serviços que ofereço para sua obra.
+            </p>
+
+          </div>
+
+          <div
+            class="profile-services-grid"
+            id="profileServicesGrid"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    <!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-icon">
+          <img
+            src="https://i.ibb.co/fGpKdPQB/logo.png"
+            alt="Logo"
+          />
+        </span>
+        <span style="color: var(--white)">HUB DIGITAL</span>
+      </div>
+
+      <p>Conectando profissionais, clientes e oportunidades.</p>
+
+      <div class="social">
+        <a href="#" aria-label="Instagram"
+          ><img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+            alt="Instagram"
+        /></a>
+
+        <a href="#" aria-label="Facebook"
+          ><img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+            alt="Facebook"
+        /></a>
+
+        <a href="#" aria-label="YouTube"
+          ><img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg"
+            alt="YouTube"
+        /></a>
+
+        <a href="#" aria-label="LinkedIn"
+          ><img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+            alt="LinkedIn"
+        /></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Plataforma</h4>
+      <a href="#buscar">Buscar</a>
+      <a href="#profissionais">Profissionais</a>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <a
+        href="https://wa.me/5577999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        >WhatsApp</a
+      >
+      <a href="mailto:contato@hubconstrucao.com.br"
+        >contato@hubconstrucao.com.br</a
+      >
+      <span style="font-size: 14px; display: block; margin-top: 4px"
+        >Vitória da Conquista - BA</span
+      >
+    </div>
+
+    <div class="footer-bottom">
+      <span>Projeto de Extensão — Inovação e Empreendedorismo</span>
+      <span>Vitória da Conquista - BA | 2026</span>
+    </div>
+  </div>
+</footer>
+       <script>
+      // ===== CARROSSEL DUPLO ANTES E DEPOIS =====
+      let baCurrentSlide = 0;
+      const baSlides = document.querySelectorAll(".ba-slide");
+      const baTrack = document.getElementById("baTrack");
+      const baDots = document.getElementById("baDots");
+
+      function initBaCarousel() {
+        if (baSlides.length === 0) return;
+
+        baDots.innerHTML = "";
+        baSlides.forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.className = "dot" + (index === 0 ? " active" : "");
+          dot.addEventListener("click", () => goToBaSlide(index));
+          baDots.appendChild(dot);
+        });
+
+        updateBaCarousel();
+      }
+
+      function updateBaCarousel() {
+        const totalSlides = baSlides.length;
+        if (totalSlides === 0) return;
+
+        baTrack.style.transform = `translateX(-${baCurrentSlide * 100}%)`;
+
+        document.querySelectorAll(".ba-dots .dot").forEach((dot, index) => {
+          dot.classList.toggle("active", index === baCurrentSlide);
+        });
+      }
+
+      function moveBaCarousel(direction) {
+        const totalSlides = baSlides.length;
+        if (totalSlides === 0) return;
+        baCurrentSlide =
+          (baCurrentSlide + direction + totalSlides) % totalSlides;
+        updateBaCarousel();
+      }
+
+      function goToBaSlide(index) {
+        if (index < 0 || index >= baSlides.length) return;
+        baCurrentSlide = index;
+        updateBaCarousel();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        initBaCarousel();
+      });
+
+      let baTouchStartX = 0;
+      let baTouchEndX = 0;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.getElementById("baTrack");
+        if (track) {
+          track.addEventListener(
+            "touchstart",
+            function (e) {
+              baTouchStartX = e.changedTouches[0].screenX;
+            },
+            { passive: true },
+          );
+
+          track.addEventListener(
+            "touchend",
+            function (e) {
+              baTouchEndX = e.changedTouches[0].screenX;
+              const diff = baTouchStartX - baTouchEndX;
+              if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                  moveBaCarousel(1);
+                } else {
+                  moveBaCarousel(-1);
+                }
+              }
+            },
+            { passive: true },
+          );
+        }
+      });
+
+      // ===== BANCO DE PROJETOS (4 POR PROFISSIONAL, SEM REPETIÇÃO) =====
+      
+      const PROJETOS_DATA = [
+        {
+          titulo: "Construção de Casa",
+          categoria: "Construção",
+          profissionalId: "1",
+          duracao: "60 dias",
+          descricao:
+            "Construção de residência completa, da fundação ao acabamento final, com materiais de alta qualidade e acompanhamento técnico em cada etapa.",
+          imagens: [
+            "https://i.ibb.co/dsr3yZST/Constru-o-de-Casa-1.jpg",
+            "https://i.ibb.co/TMGBQfKP/Constru-o-de-Casa-2.jpg",
+            "https://i.ibb.co/NdgqRLjM/Constru-o-de-Casa-3.jpg",
+            "https://i.ibb.co/2DZ7XX4/Constru-o-de-Casa-4.jpg",
+            "https://i.ibb.co/m5xjLRFP/Constru-o-de-Casa-5.jpg",
+            "https://i.ibb.co/LXPJXK6k/Constru-o-de-Casa-6.jpg",
+          ],
+        },
+        {
+          titulo: "Estrutura em Alvenaria",
+          categoria: "Construção",
+          profissionalId: "1",
+          duracao: "25 dias",
+          descricao:
+            "Execução de alvenaria estrutural com prumo e nível milimétricos, garantindo segurança e durabilidade para a edificação.",
+          imagens: [
+            "https://i.ibb.co/KxG59bHs/Estrutura-em-Alvenaria-1.jpg",
+            "https://i.ibb.co/Lh1rD7XT/Estrutura-em-Alvenaria-2.jpg",
+            "https://i.ibb.co/dhCDNLc/Estrutura-em-Alvenaria-3.jpg",
+            "https://i.ibb.co/4ZQHg1r6/Estrutura-em-Alvenaria-4.jpg",
+          ],
+        },
+        {
+          titulo: "Reforma de Banheiro",
+          categoria: "Reforma",
+          profissionalId: "1",
+          duracao: "18 dias",
+          descricao:
+            "Reforma completa de banheiro residencial, com demolição, impermeabilização, revestimento cerâmico e instalação de louças e metais.",
+          imagens: [
+            "https://i.ibb.co/kgbmj36k/banheiro-1.jpg",
+            "https://i.ibb.co/vCc08LWV/banheiro-2.jpg",
+            "https://i.ibb.co/35d3ZrS7/banheiro-3.jpg",
+            "https://i.ibb.co/FLK77mD0/banheiro-4.jpg",
+          ],
+        },
+        {
+          titulo: "Reforma de Cozinha",
+          categoria: "Reforma",
+          profissionalId: "1",
+          duracao: "22 dias",
+          descricao:
+            "Reforma de cozinha com nova disposição de móveis, revestimentos modernos e adequação das instalações hidráulicas e elétricas.",
+          imagens: [
+            "https://i.ibb.co/4gp3LKpZ/Reforma-de-Cozinha-2.jpg",
+            "https://i.ibb.co/DD5MtWVZ/Reforma-de-Cozinha-1.jpg",
+            "https://i.ibb.co/HL6grbsZ/Reforma-de-Cozinha-3.jpg",
+            "https://i.ibb.co/rfNzQFHR/Reforma-de-Cozinha-4.jpg",
+          ],
+        },
+        {
+          titulo: "Pintura de Interiores",
+          categoria: "Pintura",
+          profissionalId: "2",
+          duracao: "8 dias",
+          descricao:
+            "Pintura completa de ambientes internos, com preparo de superfície, aplicação de massa corrida e acabamento premium.",
+          imagens: [
+            "https://i.ibb.co/7NNWBmPP/Pintura-de-Interiores-1.jpg",
+            "https://i.ibb.co/ZRJGKddd/Pintura-de-Interiores-2.jpg",
+            "https://i.ibb.co/hFspxYcR/Pintura-de-Interiores-3.jpg",
+            "https://i.ibb.co/1JhSMcT9/Pintura-de-Interiores-4.jpg",
+          ],
+        },
+        {
+          titulo: "Pintura de Fachada",
+          categoria: "Pintura",
+          profissionalId: "2",
+          duracao: "12 dias",
+          descricao:
+            "Pintura de fachada externa com tinta impermeabilizante de alta resistência a intempéries e raios UV.",
+          imagens: [
+            "https://i.ibb.co/WNBkjyk7/Pintura-de-Fachada-1.jpg",
+            "https://i.ibb.co/LdtM0zb1/Pintura-de-Fachada-2.jpg",
+            "https://i.ibb.co/HT91qFrh/Pintura-de-Fachada-3.jpg",
+            "https://i.ibb.co/ZzPTJYS6/Pintura-de-Fachada-4.jpg",
+          ],
+        },
+        {
+          titulo: "Texturização Decorativa",
+          categoria: "Acabamento",
+          profissionalId: "2",
+          duracao: "10 dias",
+          descricao:
+            "Aplicação de textura decorativa em paredes internas, criando relevo e personalidade para o ambiente.",
+          imagens: [
+            "https://i.ibb.co/fdXcpx8F/Texturiza-o-Decorativa-1.jpg",
+            "https://i.ibb.co/JRTvT7XB/Texturiza-o-Decorativa-2.jpg",
+            "https://i.ibb.co/3m8RTkVQ/Texturiza-o-Decorativa-4.jpg",
+            "https://i.ibb.co/JWH2z417/Texturiza-o-Decorativa-3.jpg",
+          ],
+        },
+        {
+          titulo: "Efeito Cimento Queimado",
+          categoria: "Acabamento",
+          profissionalId: "2",
+          duracao: "9 dias",
+          descricao:
+            "Acabamento em efeito cimento queimado, trazendo visual industrial moderno para paredes e superfícies.",
+          imagens: [
+            "https://i.ibb.co/cK6V3KZ6/Efeito-Cimento-Queimado-1.jpg",
+            "https://i.ibb.co/CsNpdV6K/Efeito-Cimento-Queimado-4.jpg",
+            "https://i.ibb.co/FbH22VpK/Efeito-Cimento-Queimado-3.jpg",
+            "https://i.ibb.co/Y7mcf5BT/Efeito-Cimento-Queimado-2.jpg",
+          ],
+        },
+        {
+          titulo: "Instalação Elétrica",
+          categoria: "Elétrica",
+          profissionalId: "3",
+          duracao: "20 dias",
+          descricao:
+            "Instalação elétrica completa para residência de 150m², com quadro de distribuição, circuitos independentes e pontos de força.",
+          imagens: [
+            "https://i.ibb.co/G3s8LyYf/Instala-o-El-trica-Residencial-4.jpg",
+            "https://i.ibb.co/pvWQjfLx/Instala-o-El-trica-Residencial-3.jpg",
+            "https://i.ibb.co/NgTDSCww/Instala-o-El-trica-Residencial-2.jpg",
+            "https://i.ibb.co/wD2PcFm/Instala-o-El-trica-Residencial-1.jpg",
+          ],
+        },
+        {
+          titulo: "Automação Residencial",
+          categoria: "Automação",
+          profissionalId: "3",
+          duracao: "15 dias",
+          descricao:
+            "Projeto de automação residencial com controle inteligente de iluminação, portões e climatização via aplicativo.",
+          imagens: [
+            "https://i.ibb.co/DfhxHcnS/Automa-o-Residencial-1.jpg",
+            "https://i.ibb.co/ZQqH8Cc/Automa-o-Residencial-4.jpg",
+            "https://i.ibb.co/ymHgFXKZ/Automa-o-Residencial-3.jpg",
+            "https://i.ibb.co/PsMRK0F2/Automa-o-Residencial-2.jpg",
+          ],
+        },
+        {
+          titulo: "Iluminação LED",
+          categoria: "Iluminação",
+          profissionalId: "3",
+          duracao: "6 dias",
+          descricao:
+            "Projeto e instalação de iluminação em LED com foco em eficiência energética e valorização dos ambientes.",
+          imagens: [
+            "https://i.ibb.co/rRqmHmYn/Ilumina-o-LED-1.jpg",
+            "https://i.ibb.co/VYKM80Qc/Ilumina-o-LED-4.jpg",
+            "https://i.ibb.co/d0XhP5vz/Ilumina-o-LED-3.jpg",
+            "https://i.ibb.co/KzByyw3d/Ilumina-o-LED-2.jpg",
+          ],
+        },
+        {
+          titulo: "SPDA Residencial",
+          categoria: "Segurança",
+          profissionalId: "3",
+          duracao: "7 dias",
+          descricao:
+            "Instalação de Sistema de Proteção contra Descargas Atmosféricas (SPDA), garantindo segurança da edificação.",
+          imagens: [
+            "https://i.ibb.co/6JmH7fRY/SPDA-Residencial-1.jpg",
+            "https://i.ibb.co/2YNf2QFF/SPDA-Residencial-4.jpg",
+            "https://i.ibb.co/Fbp7CcSk/SPDA-Residencial-3.jpg",
+            "https://i.ibb.co/p6jBdMZ5/SPDA-Residencial-2.jpg",
+          ],
+        },
+        {
+          titulo: "Instalação Hidráulica",
+          categoria: "Hidráulica",
+          profissionalId: "4",
+          duracao: "16 dias",
+          descricao:
+            "Instalação completa de sistema hidráulico com tubulações de PVC e PPR de alta durabilidade.",
+          imagens: [
+            "https://i.ibb.co/nqSNZzJ8/Instala-o-Hidr-ulica-1.jpg",
+            "https://i.ibb.co/mV0vct5N/Instala-o-Hidr-ulica-4.jpg",
+            "https://i.ibb.co/tpcFhRcY/Instala-o-Hidr-ulica-3.jpg",
+            "https://i.ibb.co/9HSFgT2F/Instala-o-Hidr-ulica-2.jpg",
+          ],
+        },
+        {
+          titulo: "Reparo de Vazamentos",
+          categoria: "Manutenção",
+          profissionalId: "4",
+          duracao: "2 dias",
+          descricao:
+            "Localização e reparo de vazamentos ocultos com mínima intervenção em paredes e pisos.",
+          imagens: [
+            "https://i.ibb.co/tPBQLKDM/Reparo-de-Vazamentos-1.jpg",
+            "https://i.ibb.co/B2wfLsPH/Reparo-de-Vazamentos-2.jpg",
+            "https://i.ibb.co/ksyYRCFL/Reparo-de-Vazamentos-3.jpg",
+            "https://i.ibb.co/gZ9wWhqn/Reparo-de-Vazamentos-4.jpg",
+          ],
+        },
+{
+  titulo: "Desentupimento de Pia",
+  categoria: "Hidráulica",
+  profissionalId: "4",
+  duracao: "1 dia",
+  descricao:
+    "Serviço de desentupimento de pia, com identificação da obstrução, limpeza da tubulação e testes para garantir o correto escoamento da água.",
+  imagens: [
+    "https://i.ibb.co/sJ3SRR1z/Desentupimento-de-Pia-1.jpg",
+    "https://i.ibb.co/hJrm9K4n/Desentupimento-de-Pia-4.jpg",
+    "https://i.ibb.co/mVnTxhxs/Desentupimento-de-Pia-3.jpg",
+    "https://i.ibb.co/9HGhQZ9k/Desentupimento-de-Pia-2.jpg",
+  ],
+},
+       {
+  titulo: "Instalação de Torneira e Sifão",
+  categoria: "Hidráulica",
+  profissionalId: "4",
+  duracao: "1 dia",
+  descricao:
+    "Instalação ou substituição de torneiras, sifões e conexões hidráulicas em cozinhas, banheiros e áreas de serviço, com testes para verificar possíveis vazamentos.",
+  imagens: [
+    "https://i.ibb.co/S7dDmFWf/Instala-o-de-Torneira-e-Sif-o-1.jpg",
+    "https://i.ibb.co/sJXf6NFv/Instala-o-de-Torneira-e-Sif-o-2.jpg",
+    "https://i.ibb.co/HfpqZ3hz/Instala-o-de-Torneira-e-Sif-o-3.jpg",
+    "https://i.ibb.co/jP7xhpwp/Instala-o-de-Torneira-e-Sif-o-4.jpg",
+  ],
+},
+        {
+          titulo: "Forro de Gesso",
+          categoria: "Acabamento",
+          profissionalId: "5",
+          duracao: "5 dias",
+          descricao:
+            "Instalação de forro de gesso liso com design moderno e acabamento impecável.",
+          imagens: [
+            "https://i.ibb.co/15JqrBT/Forro-de-Gesso-5.jpg",
+            "https://i.ibb.co/Mk9m2s0v/Forro-de-Gesso-8.jpg",
+            "https://i.ibb.co/fd7Y84bK/Forro-de-Gesso-7.jpg",
+            "https://i.ibb.co/TDzhfPnm/Forro-de-Gesso-6.jpg",
+          ],
+        },
+        {
+          titulo: "Instalação de Drywall",
+          categoria: "Construção",
+          profissionalId: "5",
+          duracao: "7 dias",
+          descricao:
+            "Montagem de paredes em drywall para divisão de ambientes, com isolamento acústico e acabamento fino.",
+          imagens: [
+            "https://i.ibb.co/DPLLVdnz/Parede-em-Drywall-1.jpg",
+            "https://i.ibb.co/zWMLTT05/Parede-em-Drywall-4.jpg",
+            "https://i.ibb.co/chXFL9vy/Parede-em-Drywall-3.jpg",
+            "https://i.ibb.co/RW4PKSw/Parede-em-Drywall-2.jpg",
+          ],
+        },
+        {
+          titulo: "Sanca de Gesso",
+          categoria: "Acabamento",
+          profissionalId: "5",
+          duracao: "4 dias",
+          descricao:
+            "Execução de sanca de gesso com iluminação indireta embutida, valorizando o pé-direito do ambiente.",
+          imagens: [
+            "https://i.ibb.co/PGJjpbnq/Sanca-de-Gesso-1.jpg",
+            "https://i.ibb.co/Ngr2D2hL/Sanca-de-Gesso-2.jpg",
+            "https://i.ibb.co/yBXNVF4d/Sanca-de-Gesso-3.jpg",
+            "https://i.ibb.co/ZpvZCh13/Sanca-de-Gesso-4.jpg",
+          ],
+        },
+        {
+          titulo: "Divisória de Gesso",
+          categoria: "Construção",
+          profissionalId: "5",
+          duracao: "6 dias",
+          descricao:
+            "Instalação de divisória em gesso acartonado para criação de novos ambientes internos.",
+          imagens: [
+            "https://i.ibb.co/WNCT6J3M/Divis-ria-de-Gesso-1.jpg",
+            "https://i.ibb.co/prX0W7yW/Divis-ria-de-Gesso-4.jpg",
+            "https://i.ibb.co/WNbhcZjg/Divis-ria-de-Gesso-3.jpg",
+            "https://i.ibb.co/Y7dQYcth/Divis-ria-de-Gesso-2.jpg",
+          ],
+        },
+ {
+  titulo: "Portão de Ferro",
+  categoria: "Portões e Grades",
+  profissionalId: "6",
+  duracao: "4 dias",
+  descricao:
+    "Fabricação e instalação de portão de ferro sob medida para entrada de garagem, com preparação para pintura.",
+  imagens: [
+    "https://i.ibb.co/JwxPsWWq/Port-o-de-Ferro-1.jpg",
+    "https://i.ibb.co/jPd9cv15/Port-o-de-Ferro-2.jpg",
+    "https://i.ibb.co/gFjzjSXM/Port-o-de-Ferro-3.jpg",
+    "https://i.ibb.co/BVvDZY0D/Port-o-de-Ferro-4.jpg",
+  ],
+},
+{
+  titulo: "Grade para Janela",
+  categoria: "Portões e Grades",
+  profissionalId: "6",
+  duracao: "2 dias",
+  descricao:
+    "Fabricação e instalação de grades de ferro sob medida para janelas, oferecendo mais segurança para a residência.",
+  imagens: [
+    "https://i.ibb.co/NgRSHDRP/Grade-para-Janela-1.jpg",
+    "https://i.ibb.co/jkz2fNws/Grade-para-Janela-2.jpg",
+    "https://i.ibb.co/FFFy9zT/Grade-para-Janela-3.jpg",
+    "https://i.ibb.co/m5ZjqTJQ/Grade-para-Janela-4.jpg",
+  ],
+},
+{
+  titulo: "Corrimão de Ferro",
+  categoria: "Portões e Grades",
+  profissionalId: "6",
+  duracao: "2 dias",
+  descricao:
+    "Fabricação e instalação de corrimão de ferro sob medida para escadas, áreas externas e entradas de residências.",
+  imagens: [
+    "https://i.ibb.co/nMhtTJxt/Corrim-o-de-Ferro-1.jpg",
+    "https://i.ibb.co/qY1h7F0w/Corrim-o-de-Ferro-2.jpg",
+    "https://i.ibb.co/tM1HqVfc/Corrim-o-de-Ferro-3.jpg",
+    "https://i.ibb.co/4gwjhjwC/Corrim-o-de-Ferro-4.jpg",
+  ],
+},
+{
+  titulo: "Cobertura para Garagem",
+  categoria: "Estruturas Metálicas",
+  profissionalId: "6",
+  duracao: "5 dias",
+  descricao:
+    "Fabricação e instalação de estrutura metálica para cobertura de garagem residencial, com preparação para receber telha.",
+  imagens: [
+    "https://i.ibb.co/sYBdM9W/Cobertura-para-Garagem-1.jpg",
+    "https://i.ibb.co/b5K0MmHL/Cobertura-para-Garagem-2.jpg",
+    "https://i.ibb.co/KcSRrbJP/Cobertura-para-Garagem-3.jpg",
+    "https://i.ibb.co/N2yGVQSV/Cobertura-para-Garagem-4.jpg",
+  ],
+},
+{
+  titulo: "Portão Basculante",
+  categoria: "Portões e Grades",
+  profissionalId: "7",
+  duracao: "5 dias",
+  descricao:
+    "Fabricação e instalação de portão basculante de ferro para garagem residencial, com estrutura reforçada e acabamento para pintura.",
+  imagens: [
+    "https://i.ibb.co/Rkwq4hMn/Port-o-Basculante-1.jpg",
+    "https://i.ibb.co/gLhwJzwP/Port-o-Basculante-2.jpg",
+    "https://i.ibb.co/xKMCNdSH/Port-o-Basculante-3.jpg",
+    "https://i.ibb.co/mrgMTrKK/Port-o-Basculante-4.jpg0",
+  ],
+},
+{
+  titulo: "Porta de Ferro",
+  categoria: "Portões e Grades",
+  profissionalId: "7",
+  duracao: "3 dias",
+  descricao:
+    "Fabricação e instalação de porta de ferro sob medida para entrada de casa, área de serviço ou acesso externo.",
+  imagens: [
+    "https://i.ibb.co/nqB24jxD/Porta-de-Ferro-1.jpg",
+    "https://i.ibb.co/Dc76JX2/Porta-de-Ferro-2.jpg",
+    "https://i.ibb.co/21wPfkt9/Porta-de-Ferro-3.jpg",
+    "https://i.ibb.co/vv32KWjK/Porta-de-Ferro-4.jpg",
+  ],
+},
+{
+  titulo: "Churrasqueira de Ferro",
+  categoria: "Estruturas Metálicas",
+  profissionalId: "7",
+  duracao: "3 dias",
+  descricao:
+    "Fabricação de churrasqueira em estrutura metálica sob medida para área externa, varanda ou espaço de lazer.",
+  imagens: [
+    "https://i.ibb.co/0Rb77gM1/Churrasqueira-de-Ferro-1.jpg",
+    "https://i.ibb.co/zT00cjFP/Churrasqueira-de-Ferro-2.jpg",
+    "https://i.ibb.co/CKRrnSVw/Churrasqueira-de-Ferro-3.jpg",
+    "https://i.ibb.co/3yhB2C6B/Churrasqueira-de-Ferro-4.jpg",
+  ],
+},
+        {
+          titulo: "Janela de Alumínio",
+          categoria: "Esquadrias",
+          profissionalId: "7",
+          duracao: "5 dias",
+          descricao:
+            "Instalação de janelas de alumínio de correr com vidro temperado e vedação acústica.",
+          imagens: [
+            "https://i.ibb.co/jkRfYhwV/Janela-de-Alum-nio-1.jpg",
+            "https://i.ibb.co/rf7fwxyf/Janela-de-Alum-nio-2.jpg",
+            "https://i.ibb.co/kgdsCkcr/Janela-de-Alum-nio-3.jpg",
+            "https://i.ibb.co/zV1mwrn3/Janela-de-Alum-nio-4.jpg",
+          ],
+        },
+        {
+          titulo: "Construção de Muro",
+          categoria: "Construção",
+          profissionalId: "8",
+          duracao: "12 dias",
+          descricao:
+            "Construção de muro de divisa em alvenaria com fundação em sapata corrida.",
+          imagens: [
+            "https://i.ibb.co/YBGDkQvr/Constru-o-de-Muro-1.jpg",
+            "https://i.ibb.co/rG1jw2nJ/Constru-o-de-Muro-2.jpg",
+            "https://i.ibb.co/Cpn4bNxC/Constru-o-de-Muro-3.jpg",
+            "https://i.ibb.co/QjxSjD5F/Constru-o-de-Muro-4.jpg",
+            "https://i.ibb.co/XxndJsPk/Constru-o-de-Muro-5.jpg",
+          ],
+        },
+        {
+          titulo: "Reforma de Banheiro Compacto",
+          categoria: "Reforma",
+          profissionalId: "8",
+          duracao: "14 dias",
+          descricao:
+            "Reforma de banheiro compacto com otimização de espaço, novos revestimentos e louças.",
+          imagens: [
+            "https://i.ibb.co/cK8Gc7Gh/Reforma-de-Banheiro-Compacto-1.jpg",
+            "https://i.ibb.co/4qvWYYn/Reforma-de-Banheiro-Compacto-2.jpg",
+            "https://i.ibb.co/7d4rBHQ3/Reforma-de-Banheiro-Compacto-3.jpg",
+            "https://i.ibb.co/PZpyWSgx/Reforma-de-Banheiro-Compacto-4.jpg",
+          ],
+        },
+        {
+          titulo: "Laje Maciça",
+          categoria: "Construção",
+          profissionalId: "8",
+          duracao: "10 dias",
+          descricao:
+            "Execução de laje maciça de concreto armado com fôrma e escoramento técnico.",
+          imagens: [
+            "https://i.ibb.co/BVrxZ9CX/Laje-Ma-1.jpg",
+            "https://i.ibb.co/MDLKYN0v/Laje-Ma-2.jpg",
+            "https://i.ibb.co/MypSFNhY/Laje-Ma-3.jpg",
+            "https://i.ibb.co/Zz5tZXyQ/Laje-Ma-4.jpg",
+          ],
+        },
+        {
+          titulo: "Reforma de Cozinha Planejada",
+          categoria: "Reforma",
+          profissionalId: "8",
+          duracao: "20 dias",
+          descricao:
+            "Reforma de cozinha com projeto planejado, novos pontos hidráulicos e revestimentos modernos.",
+          imagens: [
+            "https://i.ibb.co/4nytpLwc/Reforma-de-Cozinha-Planejada-1.jpg",
+            "https://i.ibb.co/Y7htMnD1/Reforma-de-Cozinha-Planejada-2.jpg",
+            "https://i.ibb.co/7tfDrFjb/Reforma-de-Cozinha-Planejada-3.jpg",
+            "https://i.ibb.co/s99rRVNL/Reforma-de-Cozinha-Planejada-4.jpg",
+          ],
+        },
+       {
+  titulo: "Instalação de Tomadas e Interruptores",
+  categoria: "Instalação",
+  profissionalId: "9",
+  duracao: "1 dia",
+  descricao:
+    "Instalação e substituição de tomadas, interruptores e pontos elétricos em ambientes residenciais, com organização e adequação da fiação.",
+  imagens: [
+    "https://i.ibb.co/sdfCR1TQ/Instala-o-de-Tomadas-e-Interruptores-1.jpg",
+    "https://i.ibb.co/Zpmg3spF/Instala-o-de-Tomadas-e-Interruptores-4.jpg",
+    "https://i.ibb.co/CpgZ7xfy/Instala-o-de-Tomadas-e-Interruptores-3.jpg",
+    "https://i.ibb.co/tP2p7XHW/Instala-o-de-Tomadas-e-Interruptores-2.jpg",
+  ],
+},
+{
+  titulo: "Manutenção em Quadro de Distribuição",
+  categoria: "Manutenção",
+  profissionalId: "9",
+  duracao: "1 dia",
+  descricao:
+    "Manutenção e organização de quadro de distribuição, incluindo identificação de circuitos, reaperto de conexões e substituição de disjuntores quando necessário.",
+  imagens: [
+    "https://i.ibb.co/jkGMMSWC/Manuten-o-em-Quadro-de-Distribui-o-1.jpg",
+    "https://i.ibb.co/Lh6KDh9g/Manuten-o-em-Quadro-de-Distribui-o-2.jpg",
+    "https://i.ibb.co/mYxF7WX/Manuten-o-em-Quadro-de-Distribui-o-3.jpg",
+    "https://i.ibb.co/VXpPgHr/Manuten-o-em-Quadro-de-Distribui-o-4.jpg",
+  ],
+},
+{
+  titulo: "Instalação de Chuveiro Elétrico",
+  categoria: "Instalação",
+  profissionalId: "9",
+  duracao: "1 dia",
+  descricao:
+    "Instalação ou substituição de chuveiro elétrico, com verificação do circuito, conexões e dispositivos de proteção adequados à instalação.",
+  imagens: [
+    "https://i.ibb.co/N6wXqT7G/Instala-o-de-Chuveiro-El-trico-1.jpg",
+    "https://i.ibb.co/wFtCsL1p/Instala-o-de-Chuveiro-El-trico-2.jpg",
+    "https://i.ibb.co/B5K9r8CK/Instala-o-de-Chuveiro-El-trico-3.jpg",
+    "https://i.ibb.co/9HjcC535/Instala-o-de-Chuveiro-El-trico-4.jpg",
+  ],
+},
+{
+  titulo: "Instalação de Iluminação Residencial",
+  categoria: "Iluminação",
+  profissionalId: "9",
+  duracao: "1 dia",
+  descricao:
+    "Instalação de luminárias, plafons, spots e outros pontos de iluminação em ambientes residenciais, com acabamento e organização da instalação elétrica.",
+  imagens: [
+    "https://i.ibb.co/JwyV8Hc5/Instala-o-de-Ilumina-o-Residencial-1.jpg",
+    "https://i.ibb.co/NnJydMbM/Instala-o-de-Ilumina-o-Residencial-2.jpg",
+    "https://i.ibb.co/93gKsRxW/Instala-o-de-Ilumina-o-Residencial-3.jpg",
+    "https://i.ibb.co/tpDPdcGS/Instala-o-de-Ilumina-o-Residencial-4.jpg",
+  ],
+},
+        {
+          titulo: "Forro de Gesso Rebaixado",
+          categoria: "Acabamento",
+          profissionalId: "10",
+          duracao: "6 dias",
+          descricao:
+            "Instalação de forro de gesso rebaixado com nichos para iluminação embutida.",
+          imagens: [
+            "https://i.ibb.co/cKCfdPJj/Forro-de-Gesso-Rebaixado-1.jpg",
+            "https://i.ibb.co/YTB4zWgN/Forro-de-Gesso-Rebaixado-2.jpg",
+            "https://i.ibb.co/LXnMj24R/Forro-de-Gesso-Rebaixado-3.jpg",
+            "https://i.ibb.co/hQgWs41/Forro-de-Gesso-Rebaixado-4.jpg",
+          ],
+        },
+        {
+          titulo: "Parede em Drywall",
+          categoria: "Construção",
+          profissionalId: "10",
+          duracao: "8 dias",
+          descricao:
+            "Construção de parede em drywall com dupla face e manta acústica para maior conforto.",
+          imagens: [
+            "https://i.ibb.co/DPLLVdnz/Parede-em-Drywall-1.jpg",
+            "https://i.ibb.co/zWMLTT05/Parede-em-Drywall-4.jpg",
+            "https://i.ibb.co/chXFL9vy/Parede-em-Drywall-3.jpg",
+            "https://i.ibb.co/RW4PKSw/Parede-em-Drywall-2.jpg",
+          ],
+        },
+        {
+          titulo: "Sanca Invertida",
+          categoria: "Acabamento",
+          profissionalId: "10",
+          duracao: "5 dias",
+          descricao:
+            "Execução de sanca invertida em gesso, criando efeito de luz indireta contínua no ambiente.",
+          imagens: [
+            "https://i.ibb.co/WNSjLK1N/Sanca-Invertida-1.jpg",
+            "https://i.ibb.co/Ldq5z9s0/Sanca-Invertida-2.jpg",
+            "https://i.ibb.co/ZzBmWG0t/Sanca-Invertida-3.jpg",
+            "https://i.ibb.co/fdZWvbBY/Sanca-Invertida-4.jpg",
+          ],
+        },
+        {
+          titulo: "Divisória Acústica",
+          categoria: "Construção",
+          profissionalId: "10",
+          duracao: "7 dias",
+          descricao:
+            "Instalação de divisória de gesso com tratamento acústico para ambientes comerciais e home office.",
+          imagens: [
+            "https://i.ibb.co/8Dj5xq9N/Divis-ria-Ac-stica-1.jpg",
+            "https://i.ibb.co/gMf4sZjv/Divis-ria-Ac-stica-2.jpg",
+            "https://i.ibb.co/84NcKgP3/Divis-ria-Ac-stica-3.jpg",
+            "https://i.ibb.co/8gdkf5HC/Divis-ria-Ac-stica-4.jpg",
+          ],
+        },
+      ];
+
+      // ===== ESTRUTURAS DERIVADAS AUTOMATICAMENTE (sem duplicar dados) =====
+      const projetosDetalhados = {};
+      const portfolioPorProfissional = {};
+
+      PROJETOS_DATA.forEach((p) => {
+        projetosDetalhados[p.titulo] = {
+          titulo: p.titulo,
+          categoria: p.categoria,
+          imagens: p.imagens,
+          descricao: p.descricao,
+          profissionalId: p.profissionalId,
+          data: new Date().toLocaleDateString("pt-BR", {
+            month: "long",
+            year: "numeric",
+          }),
+          localizacao: "Vitória da Conquista - BA",
+          duracao: p.duracao,
+          whatsapp:
+            "https://wa.me/5577999999999?text=" +
+            encodeURIComponent(
+              `Olá! Vi o projeto "${p.titulo}" no Hub Digital e gostaria de solicitar um orçamento.`,
+            ),
+        };
+
+        if (!portfolioPorProfissional[p.profissionalId]) {
+          portfolioPorProfissional[p.profissionalId] = [];
+        }
+        portfolioPorProfissional[p.profissionalId].push({
+          title: p.titulo,
+          category: p.categoria,
+          image: p.imagens[0].replace("/900/650", "/500/375"),
+        });
+      });
+      // ===== DADOS DOS PROFISSIONAIS =====
+      const profissionaisData = {
+        1: {
+          nome: "Carlos Souza",
+          profissao: "Pedreiro",
+          categoria: "pedreiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Alvenaria",
+            "Reformas",
+            "Acabamentos",
+            "Construção",
+            "Fundações",
+            "Estruturas",
+          ],
+          bio: "Sou Carlos Souza, pedreiro com mais de 15 anos de experiência em construção e reforma. Atuo em Vitória da Conquista e região, oferecendo serviços de alta qualidade com compromisso, pontualidade e preço justo. Minha trajetória começou ainda jovem, aprendendo o ofício com meu pai. Ao longo dos anos, me especializei em alvenaria estrutural, acabamentos finos e reformas residenciais. Cada projeto é uma oportunidade de transformar espaços e superar expectativas.",
+          formacao:
+            "🏗️ Técnico em Edificações — IFBA (2012-2014)\n🔨 Especialização em Alvenaria Estrutural — SENAI (2016)\n📐 Curso de Leitura de Projetos — Creasp (2018)",
+          experiencia:
+            "15 anos atuando como pedreiro autônomo, com mais de 200 obras realizadas.",
+          contato: "(77) 99999-9999",
+          email: "carlos@hubconstrucao.com",
+          avatar: "https://i.ibb.co/NfhMXnr/perfil-1.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Carlos!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        2: {
+          nome: "Mariano Alves",
+          profissao: "Pintor",
+          categoria: "pintor",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Pintura Residencial",
+            "Texturização",
+            "Acabamento",
+            "Cores",
+            "Revestimentos",
+            "Decoração",
+          ],
+          bio: "Sou Mariano Alves, pintor profissional com especialização em acabamentos decorativos, texturização e cores. Transformo ambientes com criatividade e técnica, utilizando produtos de alta qualidade. Acredito que a pintura é a alma de qualquer espaço, e meu trabalho é trazer vida e personalidade a cada projeto.",
+          formacao:
+            "🎨 Curso de Pintura Decorativa — SENAI (2015)\n🖌️ Especialização em Texturização — Instituto de Artes (2017)\n🎭 Design de Interiores — UFBA (2019)",
+          experiencia:
+            "10 anos atuando como pintor, com mais de 150 projetos realizados.",
+          contato: "(77) 98888-8888",
+          email: "mariano@hubconstrucao.com",
+          avatar: "https://i.ibb.co/GQB8pYy6/perfil-3.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Mariano!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        3: {
+          nome: "Roberto Silva",
+          profissao: "Eletricista",
+          categoria: "eletricista",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Instalações Elétricas",
+            "Automação",
+            "Manutenção",
+            "Projetos",
+            "Iluminação",
+            "SPDA",
+          ],
+          bio: "Sou Roberto Silva, eletricista com ampla experiência em instalações residenciais e comerciais. Realizo projetos elétricos, automação, manutenção e reparos com total segurança e dentro das normas técnicas. Minha missão é garantir que cada instalação seja segura, eficiente e duradoura.",
+          formacao:
+            "⚡ Técnico em Eletrotécnica — IFBA (2011)\n🔌 Especialização em Automação — SENAI (2014)\n📋 NR-10 e NR-35 — SEST/SENAT (2016)",
+          experiencia:
+            "14 anos atuando como eletricista, com mais de 300 projetos realizados.",
+          contato: "(77) 97777-7777",
+          email: "roberto@hubconstrucao.com",
+          avatar: "https://i.ibb.co/tMx4YVn1/perfil-4.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Roberto!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        4: {
+          nome: "Fernando Lima",
+          profissao: "Encanador",
+          categoria: "encanador",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Hidráulica",
+            "Reformas",
+            "Manutenção",
+            "Instalações",
+            "Vazamentos",
+            "Tubulações",
+          ],
+          bio: "Sou Fernando Lima, encanador com sólida experiência em sistemas hidráulicos. Atuo em reformas, manutenção preventiva e corretiva, instalação de tubulações e soluções para vazamentos com eficiência. Acredito que um bom sistema hidráulico é essencial para o conforto e segurança de qualquer edificação.",
+          formacao:
+            "🔧 Técnico em Hidráulica — SENAI (2013)\n💧 Especialização em Sistemas Prediais — UNIFACS (2016)",
+          experiencia:
+            "12 anos atuando como encanador, com mais de 180 projetos realizados.",
+          contato: "(77) 96666-6666",
+          email: "fernando@hubconstrucao.com",
+          avatar: "https://i.ibb.co/LzdmsCMW/perfil-11.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Fernando!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        5: {
+          nome: "André Santos",
+          profissao: "Gesseiro",
+          categoria: "gesseiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Drywall",
+            "Forros de Gesso",
+            "Acabamentos",
+            "Sancas",
+            "Revestimentos",
+            "Divisórias",
+          ],
+          bio: "Sou André Santos, especialista em sistemas de drywall, forros de gesso e acabamentos. Trabalho com precisão e rapidez, criando ambientes modernos e funcionais para residências e comércios. Acredito que o gesso é uma arte que transforma espaços com leveza e elegância.",
+          formacao:
+            "🛠️ Curso de Gesso e Drywall — SENAI (2012)\n📐 Especialização em Acabamentos — SENAC (2015)",
+          experiencia:
+            "13 anos atuando como gesseiro, com mais de 220 projetos realizados.",
+          contato: "(77) 95555-5555",
+          email: "andre@hubconstrucao.com",
+          avatar: "https://i.ibb.co/vrMfV5P/perfil-10.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20André!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        6: {
+          nome: "Paulo Mendes",
+          profissao: "Serralheiro",
+          categoria: "serralheiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Estruturas Metálicas",
+            "Portões",
+            "Grades",
+            "Esquadrias",
+            "Projetos Personalizados",
+            "Ferro",
+          ],
+          bio: "Sou Paulo Mendes, serralheiro com mais de 20 anos de experiência. Especialista em estruturas metálicas, portões automatizados, grades, esquadrias e projetos personalizados em ferro e alumínio. Cada peça que produzo é feita com precisão e dedicação, garantindo durabilidade e beleza.",
+          formacao:
+            "🔩 Técnico em Metalurgia — SENAI (2003)\n🏗️ Especialização em Estruturas Metálicas — IFBA (2008)",
+          experiencia:
+            "22 anos atuando como serralheiro, com mais de 350 projetos realizados.",
+          contato: "(77) 94444-4444",
+          email: "paulo@hubconstrucao.com",
+          avatar: "https://i.ibb.co/27XQLmQm/perfil-9.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Paulo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        7: {
+          nome: "João Oliveira",
+          profissao: "Serralheiro",
+          categoria: "serralheiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Esquadrias",
+            "Estruturas",
+            "Projetos Personalizados",
+            "Portões",
+            "Grades",
+            "Alumínio",
+          ],
+          bio: "Sou João Oliveira, serralheiro com mais de 18 anos de experiência. Trabalho com estruturas metálicas, portões, grades e esquadrias. Cada projeto é único e feito com atenção a cada detalhe, garantindo qualidade e durabilidade.",
+          formacao:
+            "🔩 Técnico em Metalurgia — SENAI (2005)\n📐 Design de Estruturas — SENAI (2008)",
+          experiencia:
+            "18 anos atuando como serralheiro, com mais de 280 projetos realizados.",
+          contato: "(77) 93333-3333",
+          email: "joao@hubconstrucao.com",
+          avatar: "https://i.ibb.co/7dWcQSF5/perfil-8.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20João!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        8: {
+          nome: "Antônio Rocha",
+          profissao: "Pedreiro",
+          categoria: "pedreiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Construção",
+            "Reforma",
+            "Alvenaria",
+            "Acabamentos",
+            "Lajes",
+            "Estruturas",
+          ],
+          bio: "Sou Antônio Rocha, pedreiro com mais de 20 anos de experiência. Especialista em construção, reformas e alvenaria. Trabalho com qualidade, compromisso e respeito aos prazos. Cada obra é executada com atenção aos detalhes e materiais de primeira linha.",
+          formacao:
+            "🏗️ Técnico em Edificações — IFBA (2003)\n🔨 Especialização em Construção — SENAI (2006)",
+          experiencia:
+            "20 anos atuando como pedreiro, com mais de 350 obras realizadas.",
+          contato: "(77) 92222-2222",
+          email: "antonio@hubconstrucao.com",
+          avatar: "https://i.ibb.co/WWzcG2Lf/perfil-7.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Antônio!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        9: {
+          nome: "Ricardo Mota",
+          profissao: "Eletricista",
+          categoria: "eletricista",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Instalações",
+            "Manutenção",
+            "Projetos Elétricos",
+            "Iluminação",
+            "Automação",
+            "SPDA",
+          ],
+          bio: "Sou Ricardo Mota, eletricista com mais de 15 anos de experiência. Atuo com instalação, manutenção e projetos elétricos residenciais e comerciais. Minha missão é garantir segurança e eficiência em cada serviço realizado.",
+          formacao:
+            "⚡ Técnico em Eletrotécnica — IFBA (2008)\n📋 NR-10 e NR-35 — SEST/SENAT (2010)",
+          experiencia:
+            "15 anos atuando como eletricista, com mais de 400 atendimentos realizados.",
+          contato: "(77) 91111-1111",
+          email: "ricardo@hubconstrucao.com",
+          avatar: "https://i.ibb.co/ymS39bPp/perfil-6.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Ricardo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+        10: {
+          nome: "Gabriel Freitas",
+          profissao: "Gesseiro",
+          categoria: "gesseiro",
+          location: "Vitória da Conquista - BA",
+          tags: [
+            "Drywall",
+            "Sancas",
+            "Revestimentos",
+            "Forros",
+            "Acabamentos",
+            "Divisórias",
+          ],
+          bio: "Sou Gabriel Freitas, gesseiro com mais de 12 anos de experiência. Especialista em drywall, forros de gesso, sancas e acabamentos. Trabalho com precisão e criatividade, transformando ambientes com qualidade e rapidez.",
+          formacao:
+            "🛠️ Curso de Gesso e Drywall — SENAI (2010)\n📐 Especialização em Acabamentos — SENAC (2013)",
+          experiencia:
+            "12 anos atuando como gesseiro, com mais de 200 projetos realizados.",
+          contato: "(77) 90000-0000",
+          email: "gabriel@hubconstrucao.com",
+          avatar: "https://i.ibb.co/YTbYPQdj/perfil-5.jpg",
+          whatsapp:
+            "https://wa.me/5577999999999?text=Olá%20Gabriel!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+        },
+      };
+
+      // ===== SERVIÇOS POR PROFISSÃO =====
+      const servicosPorProfissao = {
+        pedreiro: [
+          {
+            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
+            name: "Alvenaria",
+            description:
+              "Construção de paredes, colunas, vigas e fundações com qualidade e segurança.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
+            name: "Reformas",
+            description:
+              "Reformas completas ou parciais, adaptando ambientes às suas necessidades.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
+            name: "Construção de Casas",
+            description: "Projetos completos desde a fundação até a entrega da obra pronta.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
+            name: "Acabamentos",
+            description: "Reboco, massas e acabamentos finos com alto padrão de qualidade.",
+            price: "Sob consulta",
+          },
+        ],
+        pintor: [
+          {
+            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
+            name: "Pintura Residencial",
+            description: "Pintura de interiores e exteriores com cores e acabamentos de qualidade.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
+            name: "Texturização",
+            description: "Aplicação de texturas e efeitos decorativos em paredes e tetos.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
+            name: "Pintura de Fachadas",
+            description: "Pintura de fachadas com tintas de alta durabilidade e proteção.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
+            name: "Revestimentos Decorativos",
+            description: "Aplicação de revestimentos decorativos e papel de parede.",
+            price: "Sob consulta",
+          },
+        ],
+        eletricista: [
+          {
+            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
+            name: "Instalações Elétricas",
+            description: "Instalação completa de sistemas elétricos residenciais e comerciais.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
+            name: "Automação Residencial",
+            description: "Projetos de automação para iluminação, cortinas e climatização.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
+            name: "Manutenção Elétrica",
+            description: "Serviços de manutenção preventiva e corretiva em sistemas elétricos.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
+            name: "Iluminação LED",
+            description: "Projetos e instalação de iluminação LED eficiente e moderna.",
+            price: "Sob consulta",
+          },
+        ],
+        encanador: [
+          {
+            icon: "https://i.ibb.co/1fP5St02/encanador.png",
+            name: "Instalação Hidráulica",
+            description: "Instalação de sistemas hidráulicos para água fria, quente e esgoto.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/1fP5St02/encanador.png",
+            name: "Reparo de Vazamentos",
+            description: "Detecção e reparo de vazamentos em tubulações com técnicas modernas.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/1fP5St02/encanador.png",
+            name: "Reformas Hidráulicas",
+            description: "Reformas e modernização de sistemas hidráulicos em residências.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/1fP5St02/encanador.png",
+            name: "Caixa d'Água",
+            description: "Instalação e manutenção de caixas d'água com sistemas de bombeamento.",
+            price: "Sob consulta",
+          },
+        ],
+        gesseiro: [
+          {
+            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
+            name: "Forro de Gesso",
+            description: "Instalação de forros de gesso com design moderno e acabamento impecável.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
+            name: "Drywall",
+            description: "Instalação de sistemas drywall para divisórias e revestimentos.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
+            name: "Sancas de Gesso",
+            description: "Confeição e instalação de sancas de gesso com detalhes personalizados.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
+            name: "Acabamentos em Gesso",
+            description: "Serviços de acabamento em gesso com alto padrão de qualidade.",
+            price: "Sob consulta",
+          },
+        ],
+        serralheiro: [
+          {
+            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
+            name: "Estruturas Metálicas",
+            description: "Projetos e execução de estruturas metálicas para edificações.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
+            name: "Portões e Grades",
+            description: "Fabricação e instalação de portões, grades e estruturas de proteção.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
+            name: "Esquadrias de Alumínio",
+            description: "Fabricação e instalação de esquadrias de alumínio com design moderno.",
+            price: "Sob consulta",
+          },
+          {
+            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
+            name: "Projetos Personalizados",
+            description: "Desenvolvimento de projetos personalizados em metal sob medida.",
+            price: "Sob consulta",
+          },
+        ],
+      };
+
+
+      // ===== VARIÁVEIS DO CARROSSEL =====
+      let currentSlide = 0;
+      let carouselImages = [];
+
+      // ===== ABRIR MODAL DE PROJETO =====
+      function openProjectModal(titulo) {
+        let projeto = projetosDetalhados[titulo];
+
+        if (!projeto) {
+          // Fallback de segurança: procura o projeto no portfólio de qualquer profissional
+          let encontrado = null;
+          for (const pid in portfolioPorProfissional) {
+            const found = portfolioPorProfissional[pid].find(
+              (p) => p.title === titulo,
+            );
+            if (found) {
+              encontrado = { ...found, profissionalId: pid };
+              break;
+            }
+          }
+
+          const imagemBase = encontrado
+            ? encontrado.image.replace("/500/375", "/900/650")
+            : "https://picsum.photos/id/101/900/650";
+
+          projeto = {
+            titulo: titulo,
+            categoria: encontrado ? encontrado.category : "Projeto",
+            imagens: [imagemBase, imagemBase, imagemBase, imagemBase],
+            descricao: `Projeto de ${(encontrado ? encontrado.category : "construção").toLowerCase()}: ${titulo}.`,
+            profissionalId: encontrado ? encontrado.profissionalId : null,
+            data: new Date().toLocaleDateString("pt-BR", {
+              month: "long",
+              year: "numeric",
+            }),
+            localizacao: "Vitória da Conquista - BA",
+            duracao: "Sob consulta",
+            whatsapp:
+              "https://wa.me/5577999999999?text=Olá!%20Vi%20o%20projeto%20" +
+              encodeURIComponent(titulo) +
+              "%20no%20Hub%20Digital%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
+          };
+          projetosDetalhados[titulo] = projeto;
+        }
+
+        currentSlide = 0;
+        carouselImages = projeto.imagens || [projeto.imagens];
+
+        const modal = document.getElementById("projectModal");
+        const slidesContainer = document.getElementById("carouselSlides");
+        const indicators = document.getElementById("carouselIndicators");
+        const counter = document.getElementById("carouselCounter");
+
+        slidesContainer.innerHTML = "";
+        carouselImages.forEach((img, index) => {
+          const slide = document.createElement("div");
+          slide.className = "carousel-slide";
+          slide.innerHTML = `<img src="${img}" alt="${projeto.titulo} - Imagem ${index + 1}" loading="lazy">`;
+          slidesContainer.appendChild(slide);
+        });
+
+        indicators.innerHTML = "";
+        carouselImages.forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.className = "dot" + (index === 0 ? " active" : "");
+          dot.setAttribute("data-index", index);
+          dot.addEventListener("click", () => goToSlide(index));
+          indicators.appendChild(dot);
+        });
+
+        counter.textContent = `1 / ${carouselImages.length}`;
+        updateCarousel();
+
+        // ===== EXIBE O PROFISSIONAL RESPONSÁVEL PELO PROJETO =====
+        let nomeProfissional = "Profissional não identificado";
+        let profissaoProfissional = "";
+        let idProfissional = null;
+        let avatarProfissional = "";
+        let whatsappProfissional = "";
+
+        if (projeto.profissionalId && profissionaisData[projeto.profissionalId]) {
+          const prof = profissionaisData[projeto.profissionalId];
+          nomeProfissional = prof.nome;
+          profissaoProfissional = prof.profissao;
+          idProfissional = projeto.profissionalId;
+          avatarProfissional = prof.avatar;
+          whatsappProfissional = prof.whatsapp;
+        }
+
+        document.getElementById("modalProjectBadge").textContent = "Projeto Finalizado";
+        document.getElementById("modalProjectTitle").textContent = projeto.titulo;
+        document.getElementById("modalProjectCategory").textContent = `🏷️ ${projeto.categoria}`;
+        document.getElementById("modalProjectDescription").textContent = projeto.descricao;
+        
+        // Atualiza o campo de profissional com avatar e link para o perfil
+        const profissionalEl = document.getElementById("modalProjectProfessional");
+        if (idProfissional) {
+          profissionalEl.innerHTML = `
+            <div style="display:flex;align-items:center;gap:12px;padding:4px 0;">
+              <img src="${avatarProfissional}" alt="${nomeProfissional}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--primary-orange);">
+              <div>
+                <div style="font-weight:600;font-size:15px;">${nomeProfissional}</div>
+                <div style="font-size:12px;color:var(--gray-600);">${profissaoProfissional}</div>
+              </div>
+              <a href="#" onclick="event.stopPropagation(); openProfile('${idProfissional}'); closeProjectModal();" style="font-size:12px;color:var(--primary-blue);text-decoration:underline;margin-left:auto;">Ver perfil</a>
+            </div>
+          `;
+        } else {
+          profissionalEl.textContent = projeto.profissional || "Profissional não identificado";
+        }
+
+        document.getElementById("modalProjectDate").textContent = projeto.data;
+        document.getElementById("modalProjectLocation").textContent = projeto.localizacao;
+        document.getElementById("modalProjectDuration").textContent = projeto.duracao;
+        
+        // Se tiver WhatsApp específico do profissional, usa ele
+        if (whatsappProfissional) {
+          document.getElementById("modalProjectWhatsApp").href = whatsappProfissional;
+        } else {
+          document.getElementById("modalProjectWhatsApp").href = projeto.whatsapp;
+        }
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      // ===== FUNÇÕES DO CARROSSEL =====
+      function updateCarousel() {
+        const slidesContainer = document.getElementById("carouselSlides");
+        const totalSlides = carouselImages.length;
+        const counter = document.getElementById("carouselCounter");
+
+        if (totalSlides === 0) return;
+
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentSlide);
+        });
+
+        counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+        const prevBtn = document.querySelector(".carousel-btn.prev");
+        const nextBtn = document.querySelector(".carousel-btn.next");
+        if (prevBtn) prevBtn.style.display = totalSlides > 1 ? "flex" : "none";
+        if (nextBtn) nextBtn.style.display = totalSlides > 1 ? "flex" : "none";
+      }
+
+      function changeSlide(direction) {
+        const totalSlides = carouselImages.length;
+        if (totalSlides === 0) return;
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+
+      function goToSlide(index) {
+        if (index < 0 || index >= carouselImages.length) return;
+        currentSlide = index;
+        updateCarousel();
+      }
+
+      function closeProjectModal() {
+        document.getElementById("projectModal").classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeProjectModal();
+        }
+      });
+
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const slidesContainer = document.getElementById("carouselSlides");
+        if (slidesContainer) {
+          slidesContainer.addEventListener(
+            "touchstart",
+            function (e) {
+              touchStartX = e.changedTouches[0].screenX;
+            },
+            { passive: true },
+          );
+
+          slidesContainer.addEventListener(
+            "touchend",
+            function (e) {
+              touchEndX = e.changedTouches[0].screenX;
+              const diff = touchStartX - touchEndX;
+              if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                  changeSlide(1);
+                } else {
+                  changeSlide(-1);
+                }
+              }
+            },
+            { passive: true },
+          );
+        }
+      });
+
+      // ===== ABRIR PERFIL =====
+      function openProfile(id) {
+        const prof = profissionaisData[id];
+        if (!prof) {
+          alert("Profissional não encontrado. Tente novamente.");
+          return;
+        }
+
+        if (mobileMenu.classList.contains("open")) {
+          toggleMenu(false);
+        }
+
+        const landingPage = document.getElementById("landingPage");
+        const profileSection = document.getElementById("profileSection");
+        const footer = document.getElementById("footer");
+
+        landingPage.style.display = "none";
+        landingPage.classList.add("hidden");
+        profileSection.classList.add("active");
+        if (footer) footer.style.display = "none";
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        document.getElementById("profileAvatar").src = prof.avatar;
+        document.getElementById("profileAvatar").alt = `Foto de ${prof.nome}`;
+        document.getElementById("profileName").innerHTML =
+          `${prof.nome} <span class="badge"><img src="https://i.ibb.co/zpmFvpp/icons-4.png" alt="Verificado" style="width:14px;height:14px;object-fit:contain;" /> Verificado</span>`;
+        document.getElementById("profileProfession").textContent =
+          prof.profissao;
+        document.getElementById("profileLocation").innerHTML =
+          `<img src="https://i.ibb.co/8LrxMqTs/icon-4.png" alt="Local" style="width:16px;height:16px;object-fit:contain;" /> ${prof.location}`;
+        document.getElementById("profileBio").textContent = prof.bio;
+        document.getElementById("profileFormacao").innerHTML =
+          prof.formacao.replace(/\n/g, "<br>");
+        document.getElementById("profileExperiencia").textContent =
+          `💼 ${prof.experiencia}`;
+
+        const tagsContainer = document.getElementById("profileTags");
+        tagsContainer.innerHTML = prof.tags
+          .map((t) => `<span>${t}</span>`)
+          .join("");
+
+        document.getElementById("detailLocation").textContent = prof.location;
+        document.getElementById("detailExperiencia").textContent =
+          prof.experiencia.replace(" anos atuando", "");
+        document.getElementById("detailContato").textContent = prof.contato;
+        document.getElementById("detailEmail").textContent = prof.email;
+        document.getElementById("detailCategoria").textContent =
+          prof.categoria.charAt(0).toUpperCase() + prof.categoria.slice(1);
+
+        document.getElementById("profileWhatsApp").href = prof.whatsapp;
+
+        renderProfilePortfolio(id);
+        renderProfileServices(prof.categoria);
+
+        const portfolioItems = portfolioPorProfissional[id] || [];
+        document.getElementById("portfolioBadge").textContent =
+          portfolioItems.length;
+        document.getElementById("portfolioCount").textContent =
+          `${portfolioItems.length} projetos`;
+
+        document
+          .querySelectorAll(".profile-tabs .tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".profile-body .tab-content")
+          .forEach((c) => c.classList.remove("active"));
+        document
+          .querySelector('.profile-tabs .tab-btn[data-tab="portfolio"]')
+          .classList.add("active");
+        document.getElementById("tab-portfolio").classList.add("active");
+      }
+
+      // ===== FECHAR PERFIL =====
+      function closeProfile() {
+        const landingPage = document.getElementById("landingPage");
+        const profileSection = document.getElementById("profileSection");
+        const footer = document.getElementById("footer");
+        if (landingPage) {
+          landingPage.style.display = "block";
+          landingPage.classList.remove("hidden");
+        }
+        if (profileSection) profileSection.classList.remove("active");
+        if (footer) footer.style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // ===== RENDERIZAR PORTFÓLIO INDIVIDUAL DO PROFISSIONAL =====
+      function renderProfilePortfolio(profId) {
+        const grid = document.getElementById("profilePortfolioGrid");
+        grid.innerHTML = "";
+        const items = portfolioPorProfissional[profId] || [];
+
+        items.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "profile-portfolio-item";
+          div.innerHTML = `
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+            <div class="overlay">
+              <div class="title">${item.title}</div>
+              <div class="category">${item.category}</div>
+            </div>
+          `;
+          div.addEventListener("click", function () {
+            openProjectModal(item.title);
+          });
+          grid.appendChild(div);
+        });
+      }
+
+      // ===== RENDERIZAR SERVIÇOS POR PROFISSÃO =====
+      function renderProfileServices(categoria) {
+        const grid = document.getElementById("profileServicesGrid");
+        grid.innerHTML = "";
+        const items =
+          servicosPorProfissao[categoria] || servicosPorProfissao.pedreiro;
+
+        items.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "profile-service-card";
+          div.innerHTML = `
+                    <img src="${item.icon}" alt="${item.name}" class="icon-service" />
+                    <div class="name">${item.name}</div>
+                    <div class="description">${item.description}</div>
+                    <div class="price" style="display:flex;align-items:center;gap:4px;"><img src="https://i.ibb.co/DP5zT2WL/Sob-consulta.png" alt="" aria-hidden="true" style="width:16px;height:16px;object-fit:contain;display:inline-block;flex-shrink:0;" /> ${item.price}</div>
+                    <a href="https://wa.me/5577999999999?text=Olá!%20Vi%20seus%20serviços%20no%20Hub%20Digital%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-primary">Solicitar Orçamento</a>
+                `;
+          grid.appendChild(div);
+        });
+      }
+
+      // ===== TABS DO PERFIL =====
+      document.querySelectorAll(".profile-tabs .tab-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const tabId = this.getAttribute("data-tab");
+          document
+            .querySelectorAll(".profile-tabs .tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".profile-body .tab-content")
+            .forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+          document.getElementById(`tab-${tabId}`).classList.add("active");
+        });
+      });
+
+      // ===== MENU MOBILE =====
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenu = document.getElementById("closeMenu");
+
+      function toggleMenu(open) {
+        mobileMenu.classList.toggle("open", open);
+        hamburger.classList.toggle("active", open);
+        hamburger.setAttribute("aria-expanded", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+
+      hamburger.addEventListener("click", () =>
+        toggleMenu(!mobileMenu.classList.contains("open")),
+      );
+      closeMenu.addEventListener("click", () => toggleMenu(false));
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => toggleMenu(false));
+      });
+
+      // ===== HEADER SCROLL =====
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+      });
+
+      // ===== NAVEGAÇÃO DO CABEÇALHO (funciona na home E dentro do perfil) =====
+      function scrollToHash(targetId) {
+        requestAnimationFrame(() => {
+          if (!targetId) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+          }
+          const el = document.getElementById(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
+
+      function handleHeaderNavClick(e) {
+        const href = this.getAttribute("href");
+        if (!href || href.charAt(0) !== "#") return;
+
+        e.preventDefault();
+
+        const targetId = href.length > 1 ? href.slice(1) : null;
+        const profileSectionEl = document.getElementById("profileSection");
+        const wasInProfile =
+          profileSectionEl && profileSectionEl.classList.contains("active");
+
+        if (mobileMenu.classList.contains("open")) {
+          toggleMenu(false);
+        }
+
+        if (wasInProfile) {
+          closeProfile();
+          if (targetId) {
+            // Aguarda a landing page voltar a ficar visível antes de rolar
+            setTimeout(() => scrollToHash(targetId), 60);
+          }
+        } else {
+          scrollToHash(targetId);
+        }
+      }
+
+      document
+        .querySelectorAll(
+          '#logoLink, .nav-desktop a[href^="#"], .mobile-menu a[href^="#"]',
+        )
+        .forEach((link) =>
+          link.addEventListener("click", handleHeaderNavClick),
+        );
+
+      // ===== FAQ ACCORDION =====
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".faq-item");
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((el) => el.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      // ===== SCROLL REVEAL =====
+      const revealElements = document.querySelectorAll(".reveal");
+
+      function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const revealPoint = 100;
+        revealElements.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < windowHeight - revealPoint) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkReveal);
+      window.addEventListener("resize", checkReveal);
+      checkReveal();
+
+      // ===== SEARCH FORM =====
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const service = document
+            .getElementById("search-service")
+            .value.trim()
+            .toLowerCase();
+          const category = document.getElementById("search-category").value;
+
+          document
+            .getElementById("profissionais")
+            .scrollIntoView({ behavior: "smooth" });
+
+          const cards = document.querySelectorAll(".professional-card");
+          let found = 0;
+
+          cards.forEach((card) => {
+            const name = card.querySelector(".name").textContent.toLowerCase();
+            const profession = card
+              .querySelector(".profession")
+              .textContent.toLowerCase();
+            const tags = Array.from(card.querySelectorAll(".tags span")).map(
+              (t) => t.textContent.toLowerCase(),
+            );
+            const cardCategory = card.getAttribute("data-category");
+
+            let match = true;
+            if (service) {
+              const matchService =
+                name.includes(service) ||
+                profession.includes(service) ||
+                tags.some((t) => t.includes(service));
+              if (!matchService) match = false;
+            }
+            if (category) {
+              if (cardCategory !== category) match = false;
+            }
+
+            if (match) {
+              card.style.display = "";
+              found++;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          const btn = this.querySelector(".btn");
+          const originalText = btn.textContent;
+          if (service || category) {
+            btn.textContent =
+              found > 0
+                ? `✅ ${found} encontrado${found > 1 ? "s" : ""}!`
+                : "🔍 Nenhum resultado";
+            btn.style.opacity = "0.7";
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.style.opacity = "1";
+            }, 2000);
+          } else {
+            cards.forEach((card) => (card.style.display = ""));
+            btn.textContent = "🔍 Mostrando todos";
+            setTimeout(() => {
+              btn.textContent = originalText;
+            }, 1500);
+          }
+        });
+
+      // ===== CATEGORIAS CLICK =====
+      document.querySelectorAll(".category-card").forEach((card) => {
+        card.addEventListener("click", function () {
+          const category = this.getAttribute("data-category");
+          if (category) {
+            document.getElementById("search-category").value = category;
+            document
+              .getElementById("searchForm")
+              .dispatchEvent(new Event("submit"));
+          }
+        });
+      });
+
+       // ===== INICIAR =====
+      console.log(
+        "✅ Hub Digital da Construção Civil - Site funcionando com 10 profissionais e 4 projetos únicos cada!",
+      );
+    </script>
+  </body>
+</html>
