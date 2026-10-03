@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover"
     />
+    <meta name="theme-color" content="#0d47a1" />
     <title>Hub Digital da Construção Civil | Vitória da Conquista - BA</title>
     <meta
       name="description"
-      content="Busque, conheça o perfil com portfólio e fale direto com profissionais da construção civil em Vitória da Conquista."
+      content="Encontre profissionais da construção civil em Vitória da Conquista. Conheça serviços, portfólios e entre em contato diretamente."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -2718,6 +2719,1002 @@
         height: 16px;
         object-fit: contain;
       }
+
+      /* =====================================================================
+         MOBILE APP — MATERIAL DESIGN (somente telas <= 768px)
+         Desktop permanece inalterado.
+         ===================================================================== */
+
+      /* Elementos exclusivos do app mobile ficam ocultos no desktop */
+      .bottom-nav,
+      .fab-whatsapp {
+        display: none;
+      }
+
+      .ripple-wave {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        background: currentColor;
+        opacity: 0.18;
+        transform: scale(0);
+        animation: ripple 0.55s ease-out forwards;
+      }
+      @keyframes ripple {
+        to {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --header-height: 56px;
+          --bottom-nav-height: 64px;
+          --safe-bottom: env(safe-area-inset-bottom, 0px);
+          --md-surface: #fdfcff;
+          --md-surface-container: #f1f3f9;
+          --md-outline: #c4c6d0;
+          --md-primary-container: #d8e2ff;
+          --elev-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+          --elev-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+          --elev-3: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+          --shape-md: 12px;
+          --shape-lg: 16px;
+          --shape-xl: 28px;
+          --ease-emph: cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        html {
+          scroll-padding-top: calc(var(--header-height) + 8px);
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+          background: var(--md-surface);
+          padding-bottom: calc(var(--bottom-nav-height) + var(--safe-bottom));
+          overscroll-behavior-y: none;
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        /* ---------- Tipografia (escala Material) ---------- */
+        .h2 {
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 500;
+        }
+        .h3 {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 500;
+        }
+        .body,
+        body {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        /* ---------- Superfícies / ripple ---------- */
+        .btn,
+        .category-card,
+        .tab-btn,
+        .bottom-nav a,
+        .faq-question,
+        .fab-whatsapp,
+        .btn-back {
+          position: relative;
+          overflow: hidden;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* ---------- Botões Material ---------- */
+        .btn {
+          min-height: 48px;
+          padding: 0 24px;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.1px;
+          border-radius: 24px;
+          box-shadow: none;
+        }
+        .btn-lg {
+          min-height: 52px;
+          padding: 0 28px;
+          font-size: 15px;
+        }
+        .btn-primary,
+        .btn-secondary,
+        .btn-success {
+          box-shadow: var(--elev-1);
+        }
+        .btn:hover,
+        .btn-primary:hover,
+        .btn-secondary:hover,
+        .btn-success:hover,
+        .btn-outline:hover,
+        .btn-white:hover {
+          transform: none;
+        }
+        .btn:active {
+          box-shadow: var(--elev-2);
+        }
+        .btn-outline {
+          border: 1px solid var(--md-outline);
+          color: var(--primary-blue);
+          background: transparent;
+        }
+        .btn-outline:hover {
+          background: rgba(13, 71, 161, 0.08);
+          color: var(--primary-blue);
+        }
+
+        /* ---------- Top App Bar ---------- */
+        .header {
+          height: var(--header-height);
+          background: var(--primary-blue);
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+          box-shadow: var(--elev-1);
+          padding-top: env(safe-area-inset-top, 0px);
+          box-sizing: content-box;
+        }
+        .header.scrolled {
+          background: var(--primary-blue);
+          box-shadow: var(--elev-3);
+        }
+        .header .container {
+          padding: 0 16px;
+        }
+        .logo {
+          color: var(--white);
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 0.15px;
+        }
+        .logo-icon,
+        .logo-icon img {
+          width: 32px;
+          height: 32px;
+        }
+        .logo-icon {
+          background: var(--white);
+          border-radius: 50%;
+          padding: 3px;
+        }
+        .logo-text .sub {
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 10px;
+        }
+        /* navegação principal passa a ser a bottom navigation */
+        .hamburger,
+        .mobile-menu {
+          display: none !important;
+        }
+
+        /* ---------- Bottom Navigation ---------- */
+        .bottom-nav {
+          display: flex;
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1100;
+          height: calc(var(--bottom-nav-height) + var(--safe-bottom));
+          padding-bottom: var(--safe-bottom);
+          background: var(--md-surface-container);
+          box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12), 0 -2px 8px rgba(0, 0, 0, 0.08);
+        }
+        .bottom-nav a {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.4px;
+          color: var(--gray-600);
+          transition: color 0.2s;
+        }
+        .bottom-nav a .pill {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 56px;
+          height: 28px;
+          border-radius: 14px;
+          transition:
+            background 0.25s var(--ease-emph),
+            width 0.25s var(--ease-emph);
+        }
+        .bottom-nav a svg {
+          width: 24px;
+          height: 24px;
+          fill: currentColor;
+        }
+        .bottom-nav a.active {
+          color: var(--primary-blue);
+          font-weight: 600;
+        }
+        .bottom-nav a.active .pill {
+          background: var(--md-primary-container);
+        }
+
+        /* ---------- FAB ---------- */
+        .fab-whatsapp {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          right: 16px;
+          bottom: calc(var(--bottom-nav-height) + var(--safe-bottom) + 16px);
+          z-index: 1050;
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
+          background: #25d366;
+          color: var(--white);
+          box-shadow: var(--elev-3);
+          transition:
+            transform 0.25s var(--ease-emph),
+            opacity 0.2s;
+        }
+        .fab-whatsapp img {
+          width: 26px;
+          height: 26px;
+          filter: brightness(0) invert(1);
+        }
+        .fab-whatsapp.hide {
+          transform: scale(0);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+          min-height: auto;
+          padding-top: calc(var(--header-height) + 16px);
+          padding-bottom: 24px;
+          align-items: flex-start;
+          background: linear-gradient(180deg, var(--md-primary-container) 0%, var(--md-surface) 100%);
+        }
+        .hero .container {
+          gap: 24px;
+          text-align: left;
+        }
+        .hero-content {
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .hero-badge {
+          font-size: 11px;
+          padding: 4px 12px;
+          background: var(--white);
+          box-shadow: var(--elev-1);
+        }
+        .hero-title {
+          font-size: 30px;
+          line-height: 36px;
+          font-weight: 600;
+          letter-spacing: 0;
+        }
+        .hero-sub {
+          font-size: 15px;
+          line-height: 22px;
+        }
+        .hero-actions {
+          width: 100%;
+          margin-top: 0;
+        }
+        .hero-features {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          gap: 8px;
+          width: calc(100% + 32px);
+          margin: 0 -16px;
+          padding: 4px 16px;
+          scrollbar-width: none;
+        }
+        .hero-features::-webkit-scrollbar {
+          display: none;
+        }
+        .hero-features span {
+          flex: 0 0 auto;
+          background: var(--white);
+          border: 1px solid var(--md-outline);
+          border-radius: 8px;
+          padding: 6px 12px;
+          font-size: 12px;
+          white-space: nowrap;
+        }
+        .hero-features span img {
+          width: 18px;
+          height: 18px;
+        }
+        .hero-visual .main-image {
+          border-radius: var(--shape-xl);
+          box-shadow: var(--elev-2);
+          aspect-ratio: 16 / 10;
+        }
+
+        /* ---------- Busca (cartão elevado + outlined fields) ---------- */
+        .search-section {
+          padding: 0 0 24px;
+          background: transparent;
+        }
+        .search-section .container {
+          margin-top: 0;
+          padding: 20px 16px;
+          border: none;
+          border-radius: var(--shape-lg);
+          box-shadow: var(--elev-2);
+          width: calc(100% - 32px);
+          background: var(--white);
+        }
+        .search-section .h3 {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        .search-form {
+          gap: 16px;
+        }
+        .search-form label {
+          font-size: 12px;
+          color: var(--primary-blue);
+          font-weight: 500;
+          margin-bottom: 4px;
+        }
+        .search-form input,
+        .search-form select {
+          height: 56px;
+          padding: 0 16px;
+          font-size: 16px; /* evita zoom no iOS */
+          border: 1px solid var(--md-outline);
+          border-radius: 4px;
+          background: var(--white);
+        }
+        .search-form input:focus,
+        .search-form select:focus {
+          border: 2px solid var(--primary-blue);
+          padding: 0 15px;
+        }
+
+        /* ---------- Categorias: chips/cards em rolagem horizontal ---------- */
+        .categories {
+          padding: 16px 0 24px;
+        }
+        .categories .section-header,
+        .section-header {
+          text-align: left;
+          margin-bottom: 16px;
+        }
+        .categories .section-header .body {
+          font-size: 14px;
+        }
+        .categories-grid {
+          display: flex;
+          overflow-x: auto;
+          gap: 12px;
+          margin: 0 -16px;
+          padding: 4px 16px 12px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+        .categories-grid::-webkit-scrollbar {
+          display: none;
+        }
+        .category-card {
+          flex: 0 0 120px;
+          scroll-snap-align: start;
+          padding: 16px 8px;
+          border-radius: var(--shape-lg);
+          background: var(--white);
+          border: 1px solid var(--md-outline);
+          box-shadow: none;
+        }
+        .category-card:hover {
+          transform: none;
+          box-shadow: none;
+          border-color: var(--md-outline);
+        }
+        .category-card:active {
+          background: var(--md-primary-container);
+        }
+        .category-card img {
+          width: 56px;
+          height: 56px;
+        }
+        .category-card .name {
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .category-card .desc {
+          font-size: 11px;
+        }
+
+        /* ---------- Seções ---------- */
+        .problem,
+        .how-it-works,
+        .professionals,
+        .portfolio,
+        .before-after,
+        .security,
+        .ods,
+        .testimonials,
+        .faq,
+        .solution-transition {
+          padding: 32px 0;
+        }
+        .before-after {
+          text-align: left;
+        }
+
+        /* Cards em lista (elevação 1, sem hover) */
+        .problem-card,
+        .how-card,
+        .security-card,
+        .testimonial-card,
+        .ods-card {
+          border-radius: var(--shape-lg);
+          box-shadow: var(--elev-1);
+          border: none;
+        }
+        .problem-card:hover,
+        .how-card:hover,
+        .security-card:hover,
+        .testimonial-card:hover,
+        .ods-card:hover,
+        .professional-card:hover,
+        .profile-service-card:hover,
+        .cta-final .option:hover {
+          transform: none;
+        }
+
+        .problem-grid {
+          gap: 12px;
+        }
+        .problem-card {
+          display: grid;
+          grid-template-columns: 40px 1fr;
+          column-gap: 16px;
+          padding: 16px;
+          border-top: none;
+          border-left: 4px solid var(--primary-orange);
+        }
+        .problem-card .icon-problem {
+          grid-row: 1 / span 3;
+          margin: 0;
+        }
+        .problem-card .number {
+          display: none;
+        }
+        .problem-card .h3 {
+          font-size: 16px;
+          margin-bottom: 2px;
+        }
+        .problem-card p {
+          font-size: 14px;
+        }
+
+        .solution-flow {
+          gap: 8px;
+          margin-top: 24px;
+        }
+        .solution-flow .step {
+          padding: 8px 14px;
+          font-size: 14px;
+          border-radius: 12px;
+        }
+        .solution-flow .step img {
+          width: 28px;
+          height: 28px;
+        }
+        .solution-flow .arrow {
+          font-size: 20px;
+        }
+        .solution-transition {
+          text-align: left;
+        }
+        .solution-transition .h2 {
+          margin-left: 0;
+        }
+        .solution-flow {
+          justify-content: flex-start;
+        }
+
+        /* Como funciona: lista com ícone à esquerda */
+        .how-grid {
+          gap: 12px;
+        }
+        .how-card {
+          display: grid;
+          grid-template-columns: 48px 1fr;
+          column-gap: 16px;
+          align-items: center;
+          text-align: left;
+          padding: 16px;
+        }
+        .how-card .step-num {
+          display: none;
+        }
+        .how-card img {
+          grid-row: 1 / span 2;
+          margin: 0;
+          width: 48px;
+          height: 48px;
+          padding: 8px;
+          border-radius: 50%;
+          background: var(--md-primary-container);
+        }
+        .how-card .h3 {
+          font-size: 16px;
+          margin: 0;
+        }
+        .how-card p {
+          font-size: 13px;
+        }
+
+        /* ---------- Profissionais: lista horizontal ---------- */
+        .professionals-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .professional-card {
+          flex-direction: row;
+          border: none;
+          border-radius: var(--shape-lg);
+          box-shadow: var(--elev-1);
+        }
+        .professional-card .avatar {
+          width: 104px;
+          height: auto;
+          min-height: 100%;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+        .professional-card .info {
+          padding: 12px;
+          min-width: 0;
+        }
+        .professional-card .name {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .professional-card .profession {
+          font-size: 13px;
+          color: var(--primary-blue);
+          font-weight: 500;
+        }
+        .professional-card .location {
+          font-size: 12px;
+        }
+        .professional-card .tags {
+          margin: 6px 0 10px;
+          gap: 4px;
+          max-height: 52px;
+          overflow: hidden;
+        }
+        .professional-card .tags span {
+          font-size: 11px;
+          padding: 2px 8px;
+          border-radius: 8px;
+          border: 1px solid var(--md-outline);
+          background: transparent;
+        }
+        .professional-card .actions {
+          gap: 8px;
+        }
+        .professional-card .actions .btn {
+          min-height: 40px;
+          padding: 0 12px;
+          font-size: 13px;
+        }
+        .professional-card .actions .btn-success {
+          flex: 0 0 48px;
+          padding: 0;
+        }
+
+        /* ---------- Portfólio: grade 2 col com legenda sempre visível ---------- */
+        .portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .portfolio-item {
+          border-radius: var(--shape-md);
+          aspect-ratio: 1 / 1;
+        }
+        .portfolio-item .overlay {
+          opacity: 1;
+          justify-content: flex-end;
+          align-items: flex-start;
+          text-align: left;
+          padding: 12px;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, transparent 65%);
+        }
+        .portfolio-item .overlay .h3 {
+          font-size: 14px;
+          line-height: 18px;
+        }
+        .portfolio-item .overlay .small {
+          font-size: 11px;
+        }
+        .portfolio-item .overlay .btn {
+          display: none; /* o cartão inteiro abre o projeto */
+        }
+        .portfolio-item:active img {
+          transform: scale(1.03);
+        }
+
+        /* ---------- Antes e depois ---------- */
+        .ba-carousel-wrapper {
+          border-radius: var(--shape-lg);
+        }
+        .ba-item {
+          border-radius: var(--shape-md);
+          box-shadow: var(--elev-1);
+        }
+        .ba-carousel-btn {
+          display: none; /* navegação por gesto de deslize + indicadores */
+        }
+        .ba-dots .dot {
+          width: 8px;
+          height: 8px;
+        }
+        .ba-dots .dot.active {
+          width: 24px;
+          border-radius: 4px;
+          transform: none;
+        }
+
+        /* ---------- Segurança ---------- */
+        .security-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .security-card {
+          border-left: 4px solid var(--primary-blue);
+          padding: 16px;
+        }
+        .security-card .icon-security {
+          display: none;
+        }
+        .security-card .h3 {
+          font-size: 16px;
+        }
+        .security-card .btn-link,
+        .btn-external-link {
+          min-height: 40px;
+        }
+        .security .cta-center .btn {
+          width: 100%;
+        }
+        .security .disclaimer {
+          text-align: left;
+          padding: 12px 16px;
+          background: #fff3e0;
+          border-radius: var(--shape-md);
+        }
+
+        /* ---------- Estatísticas ---------- */
+        .stats {
+          padding: 24px 0;
+        }
+        .stats-grid .number {
+          font-size: 28px;
+          font-weight: 500;
+        }
+        .stats-grid .label {
+          font-size: 12px;
+        }
+
+        /* ---------- ODS ---------- */
+        .ods-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .ods-card {
+          padding: 16px 12px;
+          text-align: left;
+          background: var(--md-surface-container);
+          box-shadow: none;
+        }
+        .ods-card .h3 {
+          font-size: 14px;
+        }
+        .ods-card img {
+          margin: 0 0 8px;
+        }
+
+        /* ---------- Depoimentos: carrossel horizontal ---------- */
+        .testimonials-grid {
+          display: flex;
+          overflow-x: auto;
+          gap: 12px;
+          margin: 0 -16px;
+          padding: 4px 16px 12px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+        .testimonials-grid::-webkit-scrollbar {
+          display: none;
+        }
+        .testimonial-card {
+          flex: 0 0 82%;
+          scroll-snap-align: center;
+        }
+
+        /* ---------- FAQ (lista expansível) ---------- */
+        .faq-list {
+          background: var(--white);
+          border-radius: var(--shape-lg);
+          box-shadow: var(--elev-1);
+          padding: 0 16px;
+        }
+        .faq-question {
+          min-height: 56px;
+          font-size: 15px;
+          font-weight: 500;
+          gap: 12px;
+        }
+        .faq-item:last-child {
+          border-bottom: none;
+        }
+
+        /* ---------- CTA final ---------- */
+        .cta-final {
+          padding: 40px 0;
+        }
+        .cta-final .option {
+          padding: 24px 16px;
+          border-radius: var(--shape-xl);
+        }
+
+        /* ---------- Rodapé ---------- */
+        .footer {
+          padding: 32px 0 16px;
+        }
+        .footer .container {
+          gap: 20px;
+        }
+        .footer a {
+          min-height: 40px;
+          display: flex;
+          align-items: center;
+          margin: 0;
+        }
+        .footer .social a {
+          min-height: 0;
+          width: 44px;
+          height: 44px;
+        }
+
+        /* ---------- Perfil: telas de detalhe ---------- */
+        .profile-section {
+          padding-top: calc(var(--header-height) + 8px);
+          padding-bottom: 16px;
+          background: var(--md-surface);
+        }
+        .profile-section .container {
+          padding: 0;
+        }
+        .profile-section .container > div:first-child {
+          padding: 0 8px;
+          margin-bottom: 4px !important;
+        }
+        .btn-back {
+          color: var(--primary-blue);
+          font-size: 14px;
+          font-weight: 500;
+          min-height: 48px;
+          padding: 0 16px;
+          border-radius: 24px;
+        }
+        .profile-card {
+          border-radius: 28px 28px 0 0;
+          box-shadow: none;
+          overflow: visible;
+        }
+        .profile-header {
+          flex-direction: row;
+          text-align: left;
+          align-items: center;
+          gap: 16px;
+          padding: 20px 16px;
+          border-radius: 28px 28px 0 0;
+        }
+        .profile-header .avatar {
+          width: 80px;
+          height: 80px;
+          border-width: 3px;
+        }
+        .profile-header .info h1 {
+          font-size: 20px;
+          line-height: 26px;
+          font-weight: 500;
+          justify-content: flex-start;
+          gap: 6px;
+        }
+        .profile-header .info .profession {
+          font-size: 14px;
+        }
+        .profile-header .info .location {
+          font-size: 12px;
+        }
+        .profile-header .actions {
+          justify-content: flex-start;
+          margin-top: 8px;
+        }
+        .profile-header .actions .btn {
+          min-height: 40px;
+          padding: 0 16px;
+        }
+
+        /* Abas primárias Material (fixas sob a top app bar) */
+        .profile-tabs {
+          position: sticky;
+          top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+          z-index: 50;
+          padding: 0;
+          background: var(--white);
+          box-shadow: 0 1px 0 var(--md-outline);
+          overflow-x: auto;
+          scrollbar-width: none;
+        }
+        .profile-tabs::-webkit-scrollbar {
+          display: none;
+        }
+        .profile-tabs .tab-btn {
+          flex: 1;
+          justify-content: center;
+          min-height: 48px;
+          padding: 0 12px;
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 0.1px;
+          border-bottom-width: 3px;
+          border-radius: 3px 3px 0 0;
+        }
+        .profile-body {
+          padding: 16px;
+          background: var(--md-surface);
+        }
+        .about-grid {
+          gap: 16px;
+        }
+        .about-details {
+          border-radius: var(--shape-lg);
+          background: var(--md-surface-container);
+          padding: 16px;
+        }
+        .about-details .detail-item {
+          min-height: 48px;
+          flex-wrap: wrap;
+        }
+        .about-bio p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+        .profile-portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .profile-portfolio-item {
+          border-radius: var(--shape-md);
+        }
+        .profile-portfolio-item:hover {
+          transform: none;
+        }
+        .profile-services-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .profile-service-card {
+          border-radius: var(--shape-lg);
+          border-left: none;
+          background: var(--white);
+          box-shadow: var(--elev-1);
+        }
+        .profile-service-card .btn {
+          min-height: 44px;
+        }
+
+        /* ---------- Modal de projeto → Bottom Sheet ---------- */
+        .project-modal {
+          align-items: flex-end;
+          padding: 0;
+          background: rgba(0, 0, 0, 0.5);
+          backdrop-filter: none;
+        }
+        .project-modal-content {
+          max-width: 100%;
+          width: 100%;
+          max-height: 92vh;
+          border-radius: 28px 28px 0 0;
+          animation: sheetUp 0.35s var(--ease-emph);
+          padding-bottom: var(--safe-bottom);
+        }
+        @keyframes sheetUp {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .project-modal-content::before {
+          content: "";
+          position: sticky;
+          top: 0;
+          display: block;
+          width: 32px;
+          height: 4px;
+          margin: 0 auto;
+          border-radius: 2px;
+          background: rgba(255, 255, 255, 0.75);
+          z-index: 11;
+          transform: translateY(8px);
+          height: 4px;
+        }
+        .project-modal-content .modal-close {
+          top: 14px;
+          right: 12px;
+          width: 40px;
+          height: 40px;
+        }
+        .carousel-container {
+          border-radius: 28px 28px 0 0;
+          margin-top: -4px;
+        }
+        .carousel-counter {
+          top: 20px;
+          right: 60px;
+        }
+        .project-modal-content .modal-body .title {
+          font-size: 22px;
+          font-weight: 500;
+        }
+        .project-modal-content .modal-body .details .detail {
+          border-radius: var(--shape-md);
+        }
+        .project-modal-content .modal-body .btn {
+          position: sticky;
+          bottom: 8px;
+        }
+      }
+
+      /* Telas bem pequenas */
+      @media (max-width: 380px) {
+        .hero-title {
+          font-size: 26px;
+          line-height: 32px;
+        }
+        .professional-card .avatar {
+          width: 88px;
+        }
+        .bottom-nav a {
+          font-size: 10px;
+        }
+        .bottom-nav a .pill {
+          width: 48px;
+        }
+      }
+
+      /* Respeita preferência por menos movimento */
+      @media (prefers-reduced-motion: reduce) {
+        .ripple-wave,
+        .hero-floating-card {
+          animation: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
     </style>
   </head>
 
@@ -2795,10 +3792,12 @@
         </a>
 
         <nav class="nav-desktop" aria-label="Navegação principal">
-          <a href="#buscar">Buscar</a>
+          <a href="#como-funciona">Como funciona</a>
           <a href="#profissionais">Profissionais</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="#sobre">Sobre</a>
           <div class="nav-actions">
-            <a href="#buscar" class="btn btn-primary"
+            <a href="#cta-final" class="btn btn-primary"
               >Encontrar profissional</a
             >
           </div>
@@ -2825,12 +3824,26 @@
       <button class="close-btn" id="closeMenu" aria-label="Fechar menu">
         ✕
       </button>
-      <a href="#buscar">Buscar</a>
+      <a href="#como-funciona">Como funciona</a>
       <a href="#profissionais">Profissionais</a>
-      <a href="#buscar" class="btn btn-primary btn-block"
+      <a href="#seguranca">Segurança</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#cta-final" class="btn btn-primary btn-block"
         >Encontrar profissional</a
       >
     </div>
+
+    <!-- ===== MOBILE APP: BOTTOM NAVIGATION + FAB (visíveis apenas no mobile) ===== -->
+    <nav class="bottom-nav" id="bottomNav" aria-label="Navegação do aplicativo">
+      <a href="#inicio"><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span><span>Início</span></a>
+      <a href="#buscar"><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></span><span>Buscar</span></a>
+      <a href="#profissionais"><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span><span>Profissionais</span></a>
+      <a href="#seguranca"><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></span><span>Segurança</span></a>
+      <a href="#faq"><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg></span><span>Dúvidas</span></a>
+    </nav>
+    <a class="fab-whatsapp" id="fabWhatsapp" href="https://wa.me/5577999999999?text=Olá!%20Vim%20pelo%20Hub%20Digital%20da%20Construção%20Civil." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="" />
+    </a>
 
     <!-- ===== LANDING PAGE ===== -->
     <div id="landingPage" class="page-section">
@@ -2851,8 +3864,8 @@
               e entre em contato diretamente para solicitar um orçamento.
             </p>
             <div class="hero-actions">
-              <a href="#profissionais" class="btn btn-primary btn-lg"
-                >Ver profissionais</a
+              <a href="#cta-final" class="btn btn-primary btn-lg"
+                >Encontrar profissional</a
               >
             </div>
             <div class="hero-features">
@@ -2951,8 +3964,189 @@
       </section>
 
       <!-- ===== CATEGORIAS ===== -->
+      <section class="categories" id="categorias">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Encontre profissionais por categoria</h2>
+            <p class="body" style="color: var(--gray-600)">
+              Do acabamento à instalação, encontre quem pode ajudar na sua obra.
+            </p>
+          </div>
+          <div class="categories-grid">
+            <div class="category-card reveal" data-category="pedreiro">
+              <img
+                src="https://i.ibb.co/v4Lc5CqX/pedreiro.png"
+                alt="Pedreiro"
+              />
+              <div class="name">Pedreiro</div>
+              <div class="desc">Construção e reforma</div>
+            </div>
+            <div class="category-card reveal" data-category="pintor">
+              <img src="https://i.ibb.co/DnQ8FCN/pintor.png" alt="Pintor" />
+              <div class="name">Pintor</div>
+              <div class="desc">Acabamento e cor</div>
+            </div>
+            <div class="category-card reveal" data-category="eletricista">
+              <img
+                src="https://i.ibb.co/Fq0yjsPK/eletricista.png"
+                alt="Eletricista"
+              />
+              <div class="name">Eletricista</div>
+              <div class="desc">Instalações elétricas</div>
+            </div>
+            <div class="category-card reveal" data-category="encanador">
+              <img
+                src="https://i.ibb.co/1fP5St02/encanador.png"
+                alt="Encanador"
+              />
+              <div class="name">Encanador</div>
+              <div class="desc">Hidráulica e tubulações</div>
+            </div>
+            <div class="category-card reveal" data-category="gesseiro">
+              <img
+                src="https://i.ibb.co/HLc3k7BL/gesseiro.png"
+                alt="Gesseiro"
+              />
+              <div class="name">Gesseiro</div>
+              <div class="desc">Drywall e forro</div>
+            </div>
+            <div class="category-card reveal" data-category="serralheiro">
+              <img
+                src="https://i.ibb.co/tw2rMy8z/Lixadeira.png"
+                alt="Serralheiro"
+              />
+              <div class="name">Serralheiro</div>
+              <div class="desc">Estruturas metálicas</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ===== PROBLEMA ===== -->
+      <section class="problem" id="problema">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">
+              Encontrar um bom profissional ainda pode ser difícil.
+            </h2>
+          </div>
+          <div class="problem-grid">
+            <div class="problem-card reveal">
+              <img
+                src="https://i.ibb.co/DD8Rvqc1/icons-4.png"
+                alt="Visibilidade"
+                class="icon-problem"
+              />
+              <div class="number">01</div>
+              <h3 class="h3">Visibilidade</h3>
+              <p>
+                Profissionais dependem principalmente de indicações para
+                encontrar novos clientes.
+              </p>
+            </div>
+            <div class="problem-card reveal">
+              <img
+                src="https://i.ibb.co/TM7ScyVC/icons-7.png"
+                alt="Insegurança"
+                class="icon-problem"
+              />
+              <div class="number">02</div>
+              <h3 class="h3">Insegurança</h3>
+              <p>
+                Contratações sem informações claras podem gerar problemas
+                durante a execução do serviço.
+              </p>
+            </div>
+            <div class="problem-card reveal">
+              <img
+                src="https://i.ibb.co/JWZMQQs9/icons-5.png"
+                alt="Golpes"
+                class="icon-problem"
+              />
+              <div class="number">03</div>
+              <h3 class="h3">Golpes</h3>
+              <p>
+                Profissionais e clientes podem ficar expostos a fraudes e
+                problemas financeiros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SOLUÇÃO ===== -->
+      <section class="solution-transition" id="sobre">
+        <div class="container reveal">
+          <span class="badge"> Foi pensando nisso que surgiu o Hub. </span>
+
+          <h2 class="h2">
+            Uma forma mais simples de conectar quem precisa de uma obra com quem
+            sabe executá-la.
+          </h2>
+
+          <div class="solution-flow">
+            <span class="step">
+              <img src="https://i.ibb.co/3yK3gJt1/icons-9.png" alt="Cliente" />
+              Cliente
+            </span>
+
+            <span class="arrow">→</span>
+
+            <span
+              class="step"
+              style="background: var(--primary-orange); color: var(--white)"
+            >
+              <img src="https://i.ibb.co/fGpKdPQB/logo.png" alt="Hub" />
+              Hub Digital
+            </span>
+
+            <span class="arrow">→</span>
+
+            <span class="step">
+              <img
+                src="https://i.ibb.co/dqFzhDt/icons-8.png"
+                alt="Profissional"
+              />
+              Profissional
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COMO FUNCIONA ===== -->
+      <section class="how-it-works" id="como-funciona">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Como o Hub funciona?</h2>
+          </div>
+          <div class="how-grid">
+            <div class="how-card reveal">
+              <div class="step-num">01</div>
+              <img src="https://i.ibb.co/wFqPN9GJ/icons-13.png" alt="Busque" />
+              <h3 class="h3">Busque</h3>
+              <p>Pesquise o serviço que você precisa.</p>
+            </div>
+            <div class="how-card reveal">
+              <div class="step-num">02</div>
+              <img src="https://i.ibb.co/NgsSx4bx/icons-12.png" alt="Conheça" />
+              <h3 class="h3">Conheça</h3>
+              <p>Veja perfil, especialidades e portfólio.</p>
+            </div>
+            <div class="how-card reveal">
+              <div class="step-num">03</div>
+              <img src="https://i.ibb.co/6cs2xR8R/icons-11.png" alt="Escolha" />
+              <h3 class="h3">Escolha</h3>
+              <p>Compare profissionais e conheça seus trabalhos.</p>
+            </div>
+            <div class="how-card reveal">
+              <div class="step-num">04</div>
+              <img src="https://i.ibb.co/4RnJN72Z/icons-5.png" alt="Converse" />
+              <h3 class="h3">Converse</h3>
+              <p>Solicite um orçamento diretamente.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ===== PROFISSIONAIS ===== -->
       <section class="professionals" id="profissionais">
@@ -3459,6 +4653,709 @@
       </section>
 
       <!-- ===== PORTFOLIO ===== -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">O trabalho fala por si.</h2>
+            <p class="body" style="color: var(--gray-600)">
+              Veja exemplos de serviços e transformações realizadas por
+              profissionais.
+            </p>
+          </div>
+          <div class="portfolio-grid">
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/M5QwtPTL/Constru-o-de-Casa-1.jpg"
+                alt="Construção de casa"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Construção de Casa</h3>
+                <span class="small">Pedreiro</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Construção de Casa')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/pvJHhn3k/banheiro-1.jpg"
+                alt="Reforma de banheiro"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Reforma de Banheiro</h3>
+                <span class="small">Pedreiro</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Reforma de Banheiro')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/7NNWBmPP/Pintura-de-Interiores-1.jpg"
+                alt="Pintura de interiores"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Pintura de Interiores</h3>
+                <span class="small">Pintor</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Pintura de Interiores')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/G3s8LyYf/Instala-o-El-trica-Residencial-4.jpg"
+                alt="Instalação elétrica"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Instalação Elétrica</h3>
+                <span class="small">Eletricista</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Instalação Elétrica')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/DPyFwMNL/Instala-o-Hidr-ulica-1.jpg"
+                alt="Instalação hidráulica"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Instalação Hidráulica</h3>
+                <span class="small">Encanador</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Instalação Hidráulica')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/pv1bkJ2j/Forro-de-Gesso-1.jpg"
+                alt="Forro de gesso"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Forro de Gesso</h3>
+                <span class="small">Gesseiro</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Forro de Gesso')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/0Rb77gM1/Churrasqueira-de-Ferro-1.jpg"
+                alt="Churrasqueira de Ferro"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Churrasqueira de Ferro</h3>
+                <span class="small">Serralheiro</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Churrasqueira de Ferro')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item reveal">
+              <img
+                src="https://i.ibb.co/JwN0FvXZ/Reforma-de-Cozinha-1.jpg"
+                alt="Reforma de cozinha"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="h3">Reforma de Cozinha</h3>
+                <span class="small">Pedreiro</span>
+                <button
+                  class="btn btn-white ver-projeto"
+                  onclick="openProjectModal('Reforma de Cozinha')"
+                >
+                  Ver projeto
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ANTES E DEPOIS (CARROSSEL DUPLO SINCRONIZADO) ===== -->
+      <section class="before-after" id="antes-depois">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Veja as transformações</h2>
+            <p style="color: var(--gray-600); font-size: 15px; margin-top: 4px">
+              Antes e depois de projetos realizados
+            </p>
+          </div>
+
+          <div class="ba-carousel-wrapper">
+            <div class="ba-track" id="baTrack">
+              <!-- Slide 1 -->
+              <div class="ba-slide">
+                <div class="ba-item">
+                  <span class="label">ANTES</span>
+                  <img
+                    src="https://i.ibb.co/Hyb59Tn/antes.jpg"
+                    alt="Antes da reforma"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="ba-item">
+                  <span class="label depois">DEPOIS</span>
+                  <img
+                    src="https://i.ibb.co/vbNn595/depois.jpg"
+                    alt="Depois da reforma"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="ba-slide">
+                <div class="ba-item">
+                  <span class="label">ANTES</span>
+                  <img
+                    src="https://i.ibb.co/0jwGNGV6/antes-2.jpg"
+                    alt="Antes da reforma 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="ba-item">
+                  <span class="label depois">DEPOIS</span>
+                  <img
+                    src="https://i.ibb.co/4wM0XSJB/depois-2.jpg"
+                    alt="Depois da reforma 2"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="ba-slide">
+                <div class="ba-item">
+                  <span class="label">ANTES</span>
+                  <img
+                    src="https://i.ibb.co/fY77vhCp/antes-3.jpg"
+                    alt="Antes da reforma 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="ba-item">
+                  <span class="label depois">DEPOIS</span>
+                  <img
+                    src="https://i.ibb.co/DHgTMVdQ/depois-3.jpg"
+                    alt="Depois da reforma 3"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="ba-slide">
+                <div class="ba-item">
+                  <span class="label">ANTES</span>
+                  <img
+                    src="https://i.ibb.co/cSVqqhCt/antes.png"
+                    alt="Antes da reforma 4"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="ba-item">
+                  <span class="label depois">DEPOIS</span>
+                  <img
+                    src="https://i.ibb.co/kVFkq9xF/depois.png"
+                    alt="Depois da reforma 4"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button class="ba-carousel-btn prev" onclick="moveBaCarousel(-1)">
+              ‹
+            </button>
+            <button class="ba-carousel-btn next" onclick="moveBaCarousel(1)">
+              ›
+            </button>
+          </div>
+
+          <div class="ba-dots" id="baDots"></div>
+        </div>
+      </section>
+
+      <!-- ===== SEGURANÇA ===== -->
+
+      <section class="security" id="seguranca">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Mais segurança para sua obra.</h2>
+
+            <p class="body" style="color: var(--gray-600)">
+              Informação também faz parte de uma contratação segura. Confira
+              orientações de órgãos oficiais:
+            </p>
+          </div>
+
+          <div class="security-grid">
+            <div class="security-card reveal">
+              <img
+                src="https://i.ibb.co/zVHZ77h6/seguranca.png"
+                alt="Pagamento"
+                class="icon-security"
+              />
+
+              <h3 class="h3">
+                <img
+                  src="https://i.ibb.co/6R59ZTZF/icons-17.png"
+                  alt="Pagamento"
+                />
+
+                Confirme o pagamento
+              </h3>
+
+              <p>
+                Confira o valor e o destinatário no app do seu banco antes de
+                confirmar o pagamento.
+              </p>
+
+              <a
+                href="https://www.bcb.gov.br/estabilidadefinanceira/pix-seguranca?utm="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external-link"
+              >
+                <img src="https://i.ibb.co/ZzHTwKj4/icons.png" alt="Link" />
+
+                Orientação do Banco Central
+              </a>
+            </div>
+
+            <div class="security-card reveal">
+              <img
+                src="https://i.ibb.co/zVHZ77h6/seguranca.png"
+                alt="Formalize"
+                class="icon-security"
+              />
+
+              <h3 class="h3">
+                <img
+                  src="https://i.ibb.co/VpJp9mkB/icons-16.png"
+                  alt="Formalize"
+                />
+
+                Formalize o serviço
+              </h3>
+
+              <p>
+                Defina valores, escopo e prazos em um contrato claro entre as
+                partes.
+              </p>
+
+              <a
+                href="https://www.ba.gov.br/justica/74/prestacao-de-servico?utm_source"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external-link"
+              >
+                <img src="https://i.ibb.co/ZzHTwKj4/icons.png" alt="Link" />
+
+                Modelo de contrato - Procon
+              </a>
+            </div>
+
+            <div class="security-card reveal">
+              <img
+                src="https://i.ibb.co/zVHZ77h6/seguranca.png"
+                alt="Organize"
+                class="icon-security"
+              />
+
+              <h3 class="h3">
+                <img
+                  src="https://i.ibb.co/Wv3p8VVr/icons-15.png"
+                  alt="Organize"
+                />
+
+                Organize as compras
+              </h3>
+
+              <p>
+                Defina previamente quem será responsável pelos materiais e
+                equipamentos.
+              </p>
+
+              <a
+                href="https://www.gov.br/pt-br/servicos/consultar-nota-fiscal-de-servico-eletronica?utm_source"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external-link"
+              >
+                <img src="https://i.ibb.co/ZzHTwKj4/icons.png" alt="Link" />
+
+                Consultar nota fiscal - Gov.br
+              </a>
+            </div>
+
+            <div class="security-card reveal">
+              <img
+                src="https://i.ibb.co/zVHZ77h6/seguranca.png"
+                alt="Registre"
+                class="icon-security"
+              />
+
+              <h3 class="h3">
+                <img
+                  src="https://i.ibb.co/1GqD4GgD/icons-8.png"
+                  alt="Registre"
+                />
+
+                Registre a entrega
+              </h3>
+
+              <p>
+                Documente a conclusão do serviço com fotos e um termo de
+                recebimento.
+              </p>
+
+              <a
+                href="https://www.consumidor.gov.br/pages/principal/?1787370048677"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external-link"
+              >
+                <img src="https://i.ibb.co/ZzHTwKj4/icons.png" alt="Link" />
+
+                Portal do Consumidor - Gov.br
+              </a>
+            </div>
+          </div>
+
+          <div class="cta-center reveal">
+            <a
+              href="https://www.consumidor.gov.br/pages/principal/?1787370048677"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              <img
+                src="https://i.ibb.co/ZzHTwKj4/icons.png"
+                alt="Segurança"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  object-fit: contain;
+                  display: block;
+                "
+              />
+
+              Portal do Consumidor - consumidor.gov.br
+            </a>
+          </div>
+
+          <p class="disclaimer">
+            <strong>⚠️ Importante:</strong>
+            O Hub Digital não oferece proteção jurídica absoluta. As orientações
+            acima são de fontes oficiais (Banco Central, Procon, Gov.br) e
+            servem como referência para uma contratação mais segura. Consulte
+            sempre um profissional jurídico para orientações específicas sobre
+            seu contrato.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== ESTATÍSTICAS ===== -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="reveal">
+              <div class="number">+10</div>
+              <div class="label">Profissionais</div>
+            </div>
+            <div class="reveal">
+              <div class="number">+6</div>
+              <div class="label">Categorias</div>
+            </div>
+            <div class="reveal">
+              <div class="number">+6</div>
+              <div class="label">Serviços</div>
+            </div>
+            <div class="reveal">
+              <div class="number">+500</div>
+              <div class="label">Conexões</div>
+            </div>
+          </div>
+          <p
+            style="
+              text-align: center;
+              font-size: 13px;
+              color: var(--gray-600);
+              margin-top: 16px;
+            "
+          >
+            * Dados demonstrativos.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== ODS ===== -->
+      <section class="ods" id="ods">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Tecnologia que gera impacto.</h2>
+            <p class="body" style="color: var(--gray-600)">
+              O Hub Digital da Construção Civil busca contribuir para a
+              profissionalização, inclusão digital e valorização dos
+              trabalhadores autônomos.
+            </p>
+          </div>
+          <div class="ods-grid">
+            <div class="ods-card reveal">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
+                alt="ODS 8"
+              />
+              <div class="number">ODS 8</div>
+              <h3 class="h3">Trabalho Decente</h3>
+              <p>Crescimento Econômico</p>
+            </div>
+            <div class="ods-card reveal">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
+                alt="ODS 9"
+              />
+              <div class="number">ODS 9</div>
+              <h3 class="h3">Inovação</h3>
+              <p>Indústria e Infraestrutura</p>
+            </div>
+            <div class="ods-card reveal">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
+                alt="ODS 10"
+              />
+              <div class="number">ODS 10</div>
+              <h3 class="h3">Redução das Desigualdades</h3>
+              <p>Inclusão social</p>
+            </div>
+            <div class="ods-card reveal">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
+                alt="ODS 16"
+              />
+              <div class="number">ODS 16</div>
+              <h3 class="h3">Paz e Justiça</h3>
+              <p>Instituições eficazes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DEPOIMENTOS ===== -->
+      <section class="testimonials" id="depoimentos">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Quem faz parte dessa transformação</h2>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>
+                “Encontrei um excelente pedreiro para minha reforma. O processo
+                foi muito simples.”
+              </blockquote>
+              <div class="author">
+                <img
+                  src="https://i.ibb.co/gb11Wrg7/perfil-2.jpg"
+                  alt="Avatar"
+                  loading="lazy"
+                />
+                <div>
+                  <div class="name">Ana Paula</div>
+                  <div class="role">Cliente</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>
+                “O Hub me ajudou a conseguir novos clientes. Meu portfólio ficou
+                mais visível.”
+              </blockquote>
+              <div class="author">
+                <img
+                  src="https://i.ibb.co/NfhMXnr/perfil-1.jpg"
+                  alt="Avatar"
+                  loading="lazy"
+                />
+                <div>
+                  <div class="name">Carlos Souza</div>
+                  <div class="role">Pedreiro</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal">
+              <div class="stars">★★★★☆</div>
+              <blockquote>
+                “Ótima plataforma para conectar profissionais e clientes.
+                Recomendo!”
+              </blockquote>
+              <div class="author">
+                <img
+                  src="https://i.ibb.co/GQB8pYy6/perfil-3.jpg"
+                  alt="Avatar"
+                  loading="lazy"
+                />
+                <div>
+                  <div class="name">Mariano Alves</div>
+                  <div class="role">Pintor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            style="
+              text-align: center;
+              font-size: 13px;
+              color: var(--gray-600);
+              margin-top: 16px;
+            "
+          >
+            * Depoimentos fictícios para demonstração.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="h2">Perguntas frequentes</h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                Como encontro um profissional? <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Utilize a barra de busca no topo da página. Digite o serviço
+                desejado, filtre por categoria e localização.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                Como solicito um orçamento? <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Acesse o perfil do profissional de seu interesse e clique no
+                botão de WhatsApp para iniciar a conversa.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                Os profissionais são verificados? <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Sim, todos os profissionais da plataforma passam por uma triagem
+                e verificação realizada pela equipe do Hub Digital.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                O Hub realiza pagamentos? <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Não. O Hub é uma plataforma de conexão, os pagamentos são
+                combinados diretamente entre cliente e profissional.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                O Hub garante a qualidade do serviço?
+                <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Não garantimos a qualidade. Recomendamos avaliar portfólios e
+                conversar com os profissionais antes de contratar.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                Como posso me tornar um profissional do Hub?
+                <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                A seleção de profissionais é feita pela equipe do Hub Digital.
+                Entre em contato pelo WhatsApp para mais informações sobre o
+                processo de triagem.
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-question" aria-expanded="false">
+                Como evitar golpes? <span class="icon">▼</span>
+              </button>
+              <div class="faq-answer">
+                Siga nossas orientações de segurança na seção "Segurança" acima,
+                com links para órgãos oficiais como Procon, Banco Central e
+                Gov.br.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA FINAL ===== -->
+      <section class="cta-final" id="cta-final">
+        <div class="container reveal">
+          <h2 class="h2">Pronto para começar?</h2>
+          <p>
+            Encontre um profissional para sua obra e solicite um orçamento
+            diretamente.
+          </p>
+          <div class="options">
+            <div class="option" style="max-width: 500px">
+              <img
+                src="https://i.ibb.co/3yK3gJt1/icons-9.png"
+                alt="Cliente"
+                style="
+                  display: block;
+                  margin: 0 auto 8px;
+                "
+              />
+              <h3 class="h3">Cliente</h3>
+              <p style="opacity: 0.8; font-size: 15px">
+                Encontre profissionais qualificados para sua obra.
+              </p>
+              <a href="#profissionais" class="btn btn-primary btn-lg"
+                >Ver profissionais</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- ===== FIM LANDING PAGE ===== -->
 
@@ -3897,8 +5794,16 @@
 
     <div>
       <h4>Plataforma</h4>
-      <a href="#buscar">Buscar</a>
       <a href="#profissionais">Profissionais</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#seguranca">Segurança</a>
+      <a href="#sobre">Sobre</a>
+    </div>
+
+    <div>
+      <h4>Para você</h4>
+      <a href="#cta-final">Encontrar profissional</a>
+      <a href="#faq">FAQ</a>
     </div>
 
     <div>
@@ -4357,7 +6262,7 @@
     "https://i.ibb.co/Rkwq4hMn/Port-o-Basculante-1.jpg",
     "https://i.ibb.co/gLhwJzwP/Port-o-Basculante-2.jpg",
     "https://i.ibb.co/xKMCNdSH/Port-o-Basculante-3.jpg",
-    "https://i.ibb.co/mrgMTrKK/Port-o-Basculante-4.jpg0",
+    "https://i.ibb.co/mrgMTrKK/Port-o-Basculante-4.jpg",
   ],
 },
 {
@@ -5431,7 +7336,7 @@
 
       document
         .querySelectorAll(
-          '#logoLink, .nav-desktop a[href^="#"], .mobile-menu a[href^="#"]',
+          '#logoLink, .nav-desktop a[href^="#"], .mobile-menu a[href^="#"], .bottom-nav a[href^="#"]',
         )
         .forEach((link) =>
           link.addEventListener("click", handleHeaderNavClick),
@@ -5549,9 +7454,72 @@
         });
       });
 
+
+      // ===== MOBILE APP: ripple, scroll-spy da bottom nav, cartões de portfólio =====
+      (function () {
+        const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+        // Ripple Material
+        document.addEventListener(
+          "pointerdown",
+          function (e) {
+            if (!isMobile()) return;
+            const el = e.target.closest(
+              ".btn, .category-card, .tab-btn, .bottom-nav a, .faq-question, .fab-whatsapp, .btn-back",
+            );
+            if (!el) return;
+            const rect = el.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height) * 2;
+            const wave = document.createElement("span");
+            wave.className = "ripple-wave";
+            wave.style.width = wave.style.height = size + "px";
+            wave.style.left = e.clientX - rect.left - size / 2 + "px";
+            wave.style.top = e.clientY - rect.top - size / 2 + "px";
+            el.appendChild(wave);
+            setTimeout(() => wave.remove(), 600);
+          },
+          { passive: true },
+        );
+
+        // Item ativo da bottom navigation
+        const navLinks = Array.from(document.querySelectorAll(".bottom-nav a"));
+        const ids = navLinks.map((a) => a.getAttribute("href").slice(1));
+        function setActive(id) {
+          navLinks.forEach((a) =>
+            a.classList.toggle("active", a.getAttribute("href") === "#" + id),
+          );
+        }
+        function updateNav() {
+          const profile = document.getElementById("profileSection");
+          if (profile && profile.classList.contains("active")) {
+            setActive("profissionais");
+            return;
+          }
+          let current = ids[0];
+          ids.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el && el.getBoundingClientRect().top <= 120) current = id;
+          });
+          setActive(current);
+        }
+        window.addEventListener("scroll", updateNav, { passive: true });
+        window.addEventListener("resize", updateNav);
+        document.addEventListener("click", () => setTimeout(updateNav, 400));
+        updateNav();
+
+        // No mobile não existe hover: o cartão inteiro abre o projeto
+        document.querySelectorAll(".portfolio-item").forEach((item) => {
+          item.addEventListener("click", function (e) {
+            if (!isMobile() || e.target.closest(".ver-projeto")) return;
+            const btn = item.querySelector(".ver-projeto");
+            if (btn) btn.click();
+          });
+        });
+      })();
+
        // ===== INICIAR =====
       console.log(
-        "✅ Hub Digital da Construção Civil - Site funcionando com 10 profissionais e 4 projetos únicos cada!",
+        "✅ Hub Digital da Construção Civil - Site funcionando com 10 profissionais!",
       );
     </script>
   </body>
