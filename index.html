@@ -2984,8 +2984,13 @@
           background: linear-gradient(180deg, var(--md-primary-container) 0%, var(--md-surface) 100%);
         }
         .hero .container {
+          grid-template-columns: minmax(0, 1fr);
           gap: 24px;
           text-align: left;
+        }
+        .hero-content,
+        .hero-visual {
+          min-width: 0;
         }
         .hero-content {
           align-items: flex-start;
@@ -3685,6 +3690,92 @@
         .project-modal-content .modal-body .btn {
           position: sticky;
           bottom: 8px;
+        }
+      }
+
+      /* Ajustes finos de responsividade (v2) */
+      @media (max-width: 768px) {
+        /* faixas roláveis: não cortar o primeiro item e alinhar ao gutter de 16px */
+        .hero-features {
+          justify-content: flex-start;
+          scroll-padding: 0 16px;
+        }
+        .categories-grid,
+        .testimonials-grid {
+          scroll-padding: 0 16px;
+        }
+
+        /* cabeçalhos de seção sempre à esquerda (vencem as regras do desktop) */
+        .categories .section-header,
+        .problem .section-header,
+        .professionals .section-header,
+        .how-it-works .section-header,
+        .portfolio .section-header,
+        .before-after .section-header,
+        .security .section-header,
+        .ods .section-header,
+        .testimonials .section-header,
+        .faq .section-header {
+          text-align: left;
+          margin-bottom: 16px;
+        }
+        .professionals > .container > p,
+        .stats p {
+          text-align: left !important;
+        }
+
+        /* fluxo Cliente → Hub → Profissional em uma única linha */
+        .solution-flow {
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          gap: 4px;
+        }
+        .solution-flow .step {
+          flex: 1 1 0;
+          min-width: 0;
+          flex-direction: column;
+          gap: 4px;
+          padding: 12px 6px;
+          font-size: 12px;
+          text-align: center;
+        }
+        .solution-flow .arrow {
+          flex: 0 0 auto;
+          font-size: 18px;
+        }
+
+        /* abas do perfil: 3 abas cabem sem rolar */
+        .profile-tabs .tab-btn {
+          padding: 0 6px;
+          gap: 4px;
+          min-width: 0;
+        }
+        .profile-tabs .tab-btn img {
+          display: none;
+        }
+        .profile-tabs .tab-btn .badge {
+          margin-left: 2px;
+          padding: 0 7px;
+        }
+        .profile-header .avatar {
+          flex: 0 0 80px;
+        }
+        .profile-header .info {
+          min-width: 0;
+          flex: 1;
+        }
+
+        .search-form select {
+          color: var(--gray-800);
+          background: var(--white);
+        }
+
+        /* textos longos nunca estouram */
+        h1, h2, h3, p, .name, .profession, blockquote {
+          overflow-wrap: anywhere;
+        }
+        img {
+          max-width: 100%;
         }
       }
 
